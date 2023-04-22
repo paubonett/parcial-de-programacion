@@ -284,7 +284,6 @@ while 1:
                                     
 
                             elif producOpc =='2':
-<<<<<<< HEAD
                                 while 1:
                                     add = input('Agregar nuevo:  1. Producto, 2. Categoría, 3. Salir : ')
                                     if add == '1':
@@ -351,46 +350,6 @@ while 1:
                                                 break
                                     elif add == "3":
                                         break
-=======
-                                add = input('Agregar nuevo:  1. Producto, 2. Categoría: ')
-                                if add == '1':
-                                    cualmenu2 = input('Ingrese un número: 1. Menú Comidas, 2. Menú Cocteles, 3. Salir: ')
-                                    if cualmenu2 == '1':
-                                        mostrarMenuComida()
-                                        numberproduct=input('Ingrese número de la categoría a la que desea agregarle un nuevo producto: ')
-                                        nuevoProductoComida(numberproduct)
-                                        
-                                    elif cualmenu2 == '2':
-                                        mostrarMenuCocteles()
-                                        numberproduct=input('Ingrese número de la categoría a la que desea agregarle un nuevo producto: ')
-                                        nuevoProductoCocteles(numberproduct)
-                                        
-                                elif add =='2':
-                                    tipocatego=input('Ingrese un número: 1. Menú Comidas, 2. Menú Cocteles, 3. Salir: ')
-                                    if tipocatego=='1':
-                                        nombrecatego=input('ingrese nombre de la nueva categoria:   ')
-                                        categorianueva=[nombrecatego,[]]
-                                        menu_comidas.append(categorianueva)
-                                        productopregun=input('deasea ingresar productos:  ')
-                                        if productopregun=="si":
-                                            num=str(len(menu_comidas))
-                                            nuevoProductoComida(num)
-                                            print('categoria agregada con los nuevos productos')
-                                        elif productopregun=="no":
-                                            print('categoria agregada')
-
-                                    elif tipocatego =='2':
-                                        nombrecatego=input('ingrese nombre de la nueva categoria:  ')
-                                        categorianueva=[nombrecatego,[]]
-                                        menu_cocteles.append(categorianueva)
-                                        productopregun=input('desea ingresar productos:  ')
-                                        if productopregun=="si":
-                                            num=str(len(menu_cocteles))
-                                            nuevoProductoCocteles(num)
-                                            print('categoria agregada con los nuevos productos')
-                                        elif productopregun=="no":
-                                            print('categoria agregada')
->>>>>>> main
 
                             elif producOpc == "3" :
                                 produocate=input('¿Que desea eliminar? 1. Producto, 2. Categoría:   ') 
@@ -413,20 +372,6 @@ while 1:
                                                 elimino=nup
                                                 menu_comidas[caten]=elimino
                                                 print( menu_comidas[caten])
-<<<<<<< HEAD
-                                            elif numberoletr.isalpha():
-                                                nup=elimino[1]
-                                                productoeliminado.append(nup.remove(numberoletr)) 
-                                                elimino[1]=nup
-                                                menu_comidas[caten]=elimino
-                                                print(menu_comidas[caten])
-
-                                    elif cualpro == '2':
-                                        mostrarMenuCocteles()
-                                        bandera7 , numberproduct = verificatecomidas()
-                                        mostarSubmenuProductoCocteles(numberproduct)
-                                        numberoletr=input('ingrese numero o nombre del produco')
-=======
 
                                     elif cualpro == '2':
                                         mostrarMenuCocteles()
@@ -461,7 +406,6 @@ while 1:
 
 
 
->>>>>>> main
 
                             elif producOpc == "4" :
                                 bandera3 = True
