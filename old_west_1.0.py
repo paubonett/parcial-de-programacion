@@ -275,6 +275,7 @@ while 1:
                                         if numberproduct.isnumeric():
                                             mostarSubmenuProductoComida(numberproduct)
                                             numberoletr=input('ingrese numero :   ')
+
                                             caten=int(numberproduct)-1
                                             elimino=menu_comidas[caten]
                                             productoeliminado=[]
@@ -285,6 +286,7 @@ while 1:
                                                 elimino=nup
                                                 menu_comidas[caten]=elimino
                                                 print( menu_comidas[caten])
+
                                     elif cualpro == '2':
                                         mostrarMenuCocteles()
                                         numberproduct=input('Ingrese número de la categoría a la que desea eliminarle un producto: ')
@@ -318,6 +320,7 @@ while 1:
 
 
 
+
                                     
 
 
@@ -347,8 +350,8 @@ while 1:
             direccion=input('Ingrese su direccion: ')
             telefono=input('Ingrese su telefono: ')
 
-
-
+print('worl')
+#holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
 
 
