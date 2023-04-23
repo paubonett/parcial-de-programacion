@@ -229,7 +229,7 @@ def mostarSubmenuProductoCocteles(numberproduct):
 
 while 1:
     print("¡¡¡ Bienvenid@s a OLD WEST !!! (づ ｡◕‿‿◕｡) づ  ")
-    queso=input("(Ingrese un número): 1. Administrador, 2. Cajero, 3. Usuario:     ")
+    queso=input("(Ingrese un número): 1. Administrador, 2. Cajero, 3. Usuario: ")
  
     if queso=='1':
         bandera5 = True
@@ -484,7 +484,7 @@ while 1:
         bandera30=True
         while bandera30 == True:
             bandera31=False
-            azul=input("1. Iniciar sesión o 2. Registrarse: ")
+            azul=input("(Ingrese un número) 1. Iniciar sesión, 2. Registrarse, 3. Volver al menú: ")
             if azul=='1':
                 bandera31=False
                 usuarioUsu=input("Ingrese usuario: ")
@@ -496,6 +496,7 @@ while 1:
                     hacerUser = input("(Ingrese un número) 1. Modificar Datos, 2. Pedido Nuevo, 3. Pedido Vigente, 4. Factura, 5. Salir: ")
                     bandera32=False
                     while bandera32==False:
+
                         if hacerUser=='1':
                             usuario_azulmodi = input("Confirme usuario a modificar: ")
                             fila_azulmodi = None
@@ -535,10 +536,14 @@ while 1:
                                         break
                                 print('Sus datos con las modificaciones: ', usuarios[fila_azulmodi])
 
+                        elif hacerUser=='2':
+                            print('hola')
+
 
 
 
             ####################################################################  
+
             elif azul=='2':
                 contadorAzul+=1
                 nombre=input('Ingrese su nombre o 1. Salir: ')
@@ -549,4 +554,6 @@ while 1:
                     direccion=input('Ingrese su dirección: ')
                     print(autouser_user(nombre, documento, telefono, direccion))
     
-
+            #################################################################### 
+            elif azul =='3':
+                break
