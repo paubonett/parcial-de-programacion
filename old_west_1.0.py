@@ -2,18 +2,20 @@ admin=['adminsap','admin123']
 cajeros=[['cajeand','sharon123', 'Sharon Andreina', '1092387960'],['cajeang','angel123', 'Angel Daniel', '1093293435'], ['cajealj', 'paula123', 'Paula', '1090371768']]
 usu=[]
 
-
+##########################################################################################
 def imprimir_menu_comidas(menu_comidas):
     for submenu in menu_comidas:
         for texto in submenu:
             print(texto)
         print()
 
+##########################################################################################
 def imprimir_menu_cocteles(menu_cocteles):
     for submenu in menu_cocteles:
         for texto in submenu:
             print(texto)
         print()
+
 
 Carnes_Angus_Beef = [['TOMAHWK BEEF', ['-Corte de 1000 gr -Guarnición papa -Yuca al vapor -Cascos de papa -Papas a la francesa -Ensalada pico e’ gallo'], ['Precio $299000']] , ['RIBEYE BEEF', ['-Corte de 400 gr -Papa al vapor -Yuca al vapor -Ensalada pico e’ gallo'], ['Precio $139000']] , ['PICANHA ANGUS BEEF', ['-Corte de 400 gr -Guarnición papa -Yuca al vapor -Cascos de papa -Papas a la francesa -Ensalada pico e’ gallo'], ['Precio $119000']] , ['NEW YORK STEAK BEEF', ['-Lomo Ancho de 400 gr -Guarnición papa -Yuca al vapor -Cascos de papa -Ensalada pico e’ gallo'], ['Precio $129000']], ['ASADO DE TIRA BEEF', ['-Corte de 400 gr'], ['Precio $119000']], ['BIFE DE VACIO BEEF', ['-Pieza de 400 gr'], ['Precio $139000']]]                                                                      
 Entradas = [['NACHOS DAKOTA' ,['-Nachos crocantes -Carne al estilo tex-mex -Queso cheddar americano -Guacamole -Pico e ‘gallo -Frijol refrito'], ['Precio $29000']], ['SAUSAGE OLD WEST ', ['-4 chorizos de ternera -Salsa de whisky Jack Daniel’s -Papas a la francesa'], ['Precio $29000']] , [ 'PAPAS WEST SIDE', ['-Papas a la francesa -Queso cheddar -Chorizo de ternera -Tocineta crunchy'], ['Precio $30000']] , [ 'MAZORQUITAS' ,['-3 Mazorquitas al grill -Cubierta de queso paisa'], ['Precio $21000']] ,  [ 'CAMARONES FORT HAYS',  ['-14 camarones apanados -Guacamole -Dip de tártara -Pimentón rostizado'], ['Precio $32000']] , [ 'MAICITOS' , ['-Maíz dulce -Pollo al grill -Tocineta -Gratinado en queso doble crema y parmesano'], ['Precio $34000']], [ 'ALITAS RANGER', ['-12 piezas de alas -Salsa bbq -Miel -Mostaza -Picantes con papas a la francesa'], ['Precio $34000']]]
@@ -52,12 +54,54 @@ menu_cocteles=[['Cocteles de Autor', Cocteles_de_Autor], ['Bebidas Especiales', 
 contador2=3
 
 
+PedidosVentas = []
+contadorPedidos = len(PedidosVentas)
+
+
+
 def autousercajero(nombre, documento):
     usu= "cajero" + str(contador2)
     cont = "Ab" + str(documento)
     list_1=[usu, cont, nombre, documento]
     cajeros.append(list_1)
     return usu, cont
+
+def comprarComida ():
+    productos = []
+    while 1 :
+        mostrarMenuComida()
+        bandera7 , numberproduct = verificatecomidas()
+        if bandera7 == True:
+            contador = mostarSubmenuProductoComida(numberproduct)
+            bandera9 = True
+            while bandera9==True:
+                try :
+                    producto = int(input("Ingrese un número para ver la descripción del producto o "+ str(contador + 5)+ ". Ver submenú, " + str(contador + 6)+ ". Salir  "))
+                    if producto <= contador and producto >0 :
+                        nombre = str(menu_comidas[numberproduct-1][1][producto-1][0])
+                        print(nombre)      
+                        print( ','.join(menu_comidas[numberproduct-1][1][producto-1][1]))
+                        print(','.join(menu_comidas[numberproduct-1][1][producto-1][2]))
+                        while 1 :
+                            aña = input("(si) Añadir producto, (no) Salir   ")
+                            if aña.lower() == "si":
+                                productos.append(nombre)
+                                break
+                            elif aña.lower() == "no":
+                                break
+                    elif contador+5 == producto:
+                        bandera9 = False
+                    elif contador+6 == producto:
+                        bandera7 = False
+                        bandera9 = False
+                except ValueError:
+                    print("Ingrese un número")  
+        if bandera7 == False:
+            break
+    if productos == []:
+        print("No se guardo nada de comida en el pedido ")
+    elif productos != []: 
+        return productos
 
 def verifidocum():    
     while 1:
@@ -86,6 +130,14 @@ def verifinombre (nombre):
             break
         contadorveri += 1
   
+def contodo ():
+    while 1:
+        all = input("¿Con todo? (si) - (no) ")
+        if all.lower() == "si":
+            break
+        elif all.lower() == "no":
+            cambio = input("Desea añadirle o quitarle algo a la comida?  ")
+            return cambio
 
 def verifiprice():
     while True:
@@ -134,7 +186,7 @@ def verificatecocteles ():
 def verificatecomidas (): 
     while 1:
         try :
-            numberproduct= int(input('Ingrese número de la categoría en la que desea hacer un cambio o ' + str(len(menu_comidas)+5) + " para salir:  "  ))
+            numberproduct= int(input('Ingrese número de la categoría o ' + str(len(menu_comidas)+5) + " para salir:  "  ))
             if numberproduct <= len(menu_comidas) and numberproduct >= 1:
                 bandera7 = True
                 return bandera7, numberproduct 
@@ -183,6 +235,7 @@ def mostarSubmenuProductoComida(numberproduct):
     for mostrar in nuevo:
         contador+=1
         print(contador, '->',mostrar[0])
+    return contador
 
 def mostarSubmenuProductoCocteles(numberproduct):
     categoria=menu_cocteles[int(numberproduct)-1]
@@ -191,11 +244,15 @@ def mostarSubmenuProductoCocteles(numberproduct):
     for mostrar in nuevo:
         contador+=1
         print(contador, '->',mostrar[0])
+    
 
+
+####################################################################################################
 
 while 1:
     print("¡¡¡ Bienvenid@s a OLD WEST !!! (づ ｡◕‿‿◕｡) づ  ")
     queso=input("(Ingrese un número): 1. Administrador, 2. Cajero, 3. Usuario:     ")
+ 
     if queso=='1':
         bandera5 = True
         while bandera5 == True :
@@ -205,6 +262,8 @@ while 1:
             if usuarioAdm==admin[0] and contraseñaAdm==admin[1]:
                 print("Bienvenid@ Administrador :D ")
                 bandera1=True
+            else:
+                print("Usuario o contraseña incorrecta")
             while bandera1==True:
                 hacerAdm = input("(Ingrese un número) 1. Cajero, 2. Producto, 3. Ventas, 4. Volver al menú: ")
                 bandera3 =False
@@ -278,7 +337,6 @@ while 1:
 
                     elif hacerAdm == "2":
                         bandera4 = True
-                        print(bandera4 )
                         
                         while bandera4 == True:
                             producOpc = input("Ingrese un número: 1. Ver productos, 2. Nuevo producto o Categoría, 3. Eliminar Producto o Categoría, 4. Salir: ")
@@ -414,14 +472,9 @@ while 1:
                                         productoeliminado=menu_cocteles.pop(int(numberproduct)-1)
                                         mostrarMenuCocteles()
 
-
-
-
                             elif producOpc == "4" :
                                 bandera3 = True
                                 break       
-
-####################################################################################################3
                             
                     elif hacerAdm == "4":
                         bandera3 = True
@@ -429,14 +482,70 @@ while 1:
                         bandera5 = False
 
 
-                    
+####################################################################################################          
+
     elif queso=='2':
         bandera6 = True
         while bandera6 == True:
-            bandera6 = False
-            usuarioCaj=input("1.Iniciar sesión : ")
+            usuarioCaj=input("Ingrese usuario: ")
+            contraseñaCaj=input("Ingrese contraseña: ")
+            bandera8 = False
+            for cajero in cajeros:    
+                if usuarioCaj==cajero[0] and contraseñaCaj==cajero[1]:
+                    print("Bienvenid@ Cajero ;3")
+                    bandera8=True
+            if bandera8 == False:
+                print("Usuario o contraseña incorrecta")
+            while bandera8==True:
+                hacerCaj = input("(Ingrese un número) 1. Pedido, 2. Pedido Nuevo, 3. Pendientes, 4. Volver al menú: ")
+                bandera9 =False
+                while bandera9==False:
+                    if hacerCaj=='1':
+                        print("Hola")
+                        break
+                    elif hacerCaj == "2":
+                        while 1: 
+                            pedido = []
+                            quemenu = input("¿Como desea hacer el pedido? 1. Ver menú, 2.Ingresar código, 3. Salir  ")
+                            if quemenu == "1":
+                                while 1 :
+                                    cualmenu3 = input("1. Menú comidas, 2. Menú cocteles, 3. Confirmar pedido, 4. Salir  ") 
+                                    bandera9 = True
+                                    if cualmenu3 == "1":
+                                        productos = comprarComida()
+                                        if productos != None:
+                                            cambio = contodo ()
+                                            pedido.append(productos)
+                                            pedido.append(cambio)
+                                            
+                                    elif cualmenu3 == "2":
+                                        print("creo qsi")
+                                    
+                                    elif cualmenu3 == "3":
+                                        pedido.insert(0,contadorPedidos+1)
+                                        print(pedido)
+                                        print(PedidosVentas)
+                                        print("Pedido #" + str(contadorPedidos+1) + " gruardado")
+
+                                                    
+                                     #       elif bandera7 == False:
+                                      #          break
+                                ###########################now#########################
+
+
+
+                            elif quemenu == "3":
+                                print("AY")
+                                break            
+                    elif hacerCaj == 4:
+                        print("salir")
+                        bandera8 = False
+                        break 
+            
+        
+
     elif queso=='3':
-        dese2=input("1.iniciar sesion o 2.registrarse : ")
+        dese2=input("1. Iniciar sesión o 2. Registrarse: ")
         if dese2=='1':
             usuarioUsu=input("Ingrese usuario ")
             contraseñaUsu=input("Ingrese contraseña ")
@@ -445,6 +554,8 @@ while 1:
             documento=input('Ingrese su documento:')
             direccion=input('Ingrese su direccion: ')
             telefono=input('Ingrese su telefono: ')
+
+
 
 
 
