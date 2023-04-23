@@ -1,19 +1,30 @@
 admin=['adminsap','admin123']
 cajeros=[['cajeand','sharon123', 'Sharon Andreina', '1092387960'],['cajeang','angel123', 'Angel Daniel', '1093293435'], ['cajealj', 'paula123', 'Paula', '1090371768']]
-usu=[]
 
+##########################################################################################
 
+def buscar_user_pass(matriz, usuario, contraseña):
+    for uWu in matriz:
+        if uWu[0] == usuario and uWu[1] == contraseña:
+            return True
+    return False
+
+usuarios=[['user1', 'pass1', 'Alicia', '12345678', '0000000000', 'País de las maravillas'], ['user2', 'pass2', 'Naruto', '87654321' '1111111111', 'Aldea Oculta de la Hoja']]
+
+##########################################################################################
 def imprimir_menu_comidas(menu_comidas):
     for submenu in menu_comidas:
         for texto in submenu:
             print(texto)
         print()
 
+##########################################################################################
 def imprimir_menu_cocteles(menu_cocteles):
     for submenu in menu_cocteles:
         for texto in submenu:
             print(texto)
         print()
+
 
 Carnes_Angus_Beef = [['TOMAHWK BEEF', ['-Corte de 1000 gr -Guarnición papa -Yuca al vapor -Cascos de papa -Papas a la francesa -Ensalada pico e’ gallo'], ['Precio $299000']] , ['RIBEYE BEEF', ['-Corte de 400 gr -Papa al vapor -Yuca al vapor -Ensalada pico e’ gallo'], ['Precio $139000']] , ['PICANHA ANGUS BEEF', ['-Corte de 400 gr -Guarnición papa -Yuca al vapor -Cascos de papa -Papas a la francesa -Ensalada pico e’ gallo'], ['Precio $119000']] , ['NEW YORK STEAK BEEF', ['-Lomo Ancho de 400 gr -Guarnición papa -Yuca al vapor -Cascos de papa -Ensalada pico e’ gallo'], ['Precio $129000']], ['ASADO DE TIRA BEEF', ['-Corte de 400 gr'], ['Precio $119000']], ['BIFE DE VACIO BEEF', ['-Pieza de 400 gr'], ['Precio $139000']]]                                                                      
 Entradas = [['NACHOS DAKOTA' ,['-Nachos crocantes -Carne al estilo tex-mex -Queso cheddar americano -Guacamole -Pico e ‘gallo -Frijol refrito'], ['Precio $29000']], ['SAUSAGE OLD WEST ', ['-4 chorizos de ternera -Salsa de whisky Jack Daniel’s -Papas a la francesa'], ['Precio $29000']] , [ 'PAPAS WEST SIDE', ['-Papas a la francesa -Queso cheddar -Chorizo de ternera -Tocineta crunchy'], ['Precio $30000']] , [ 'MAZORQUITAS' ,['-3 Mazorquitas al grill -Cubierta de queso paisa'], ['Precio $21000']] ,  [ 'CAMARONES FORT HAYS',  ['-14 camarones apanados -Guacamole -Dip de tártara -Pimentón rostizado'], ['Precio $32000']] , [ 'MAICITOS' , ['-Maíz dulce -Pollo al grill -Tocineta -Gratinado en queso doble crema y parmesano'], ['Precio $34000']], [ 'ALITAS RANGER', ['-12 piezas de alas -Salsa bbq -Miel -Mostaza -Picantes con papas a la francesa'], ['Precio $34000']]]
@@ -50,7 +61,7 @@ menu_cocteles=[['Cocteles de Autor', Cocteles_de_Autor], ['Bebidas Especiales', 
 
 
 contador2=3
-
+contadorAzul=2
 
 def autousercajero(nombre, documento):
     usu= "cajero" + str(contador2)
@@ -58,6 +69,14 @@ def autousercajero(nombre, documento):
     list_1=[usu, cont, nombre, documento]
     cajeros.append(list_1)
     return usu, cont
+
+def autouser_user(nombre, documento, telefono, direccion):
+    usu= "user" + str(contadorAzul)
+    cont = "pass" + str(contadorAzul)
+    list_1=[usu, cont, nombre, documento, telefono, direccion]
+    usuarios.append(list_1)
+    print('Su usuario es: ', '(', usu, ')', 'y su contraseña es: ', '(', cont, ')')
+
 
 def verifidocum():    
     while 1:
@@ -73,7 +92,7 @@ def verifidocum():
             print("Error, Ingrese números")
     return documento
 
-def verifinombre (nombre):
+def verifinombre(nombre):
     contadorveri = 0
     while 1:
         if contadorveri != 0 :
@@ -86,6 +105,19 @@ def verifinombre (nombre):
             break
         contadorveri += 1
   
+def verifitelefono():
+    while 1:
+        try:
+            telefono = int(input("Ingrese su número de telefono o ingrese (3) salir: "))
+            if telefono == 3:
+                break
+            elif len(str(telefono)) == 10:
+                break
+            else:
+                print("Ingrese su número de telefono correctamente.")
+        except ValueError:
+            print("Error, Ingrese números.")
+    return telefono
 
 def verifiprice():
     while True:
@@ -193,9 +225,12 @@ def mostarSubmenuProductoCocteles(numberproduct):
         print(contador, '->',mostrar[0])
 
 
+####################################################################################################
+
 while 1:
     print("¡¡¡ Bienvenid@s a OLD WEST !!! (づ ｡◕‿‿◕｡) づ  ")
     queso=input("(Ingrese un número): 1. Administrador, 2. Cajero, 3. Usuario:     ")
+ 
     if queso=='1':
         bandera5 = True
         while bandera5 == True :
@@ -414,14 +449,9 @@ while 1:
                                         productoeliminado=menu_cocteles.pop(int(numberproduct)-1)
                                         mostrarMenuCocteles()
 
-
-
-
                             elif producOpc == "4" :
                                 bandera3 = True
                                 break       
-
-####################################################################################################3
                             
                     elif hacerAdm == "4":
                         bandera3 = True
@@ -429,25 +459,94 @@ while 1:
                         bandera5 = False
 
 
-                    
+####################################################################################################          
+
     elif queso=='2':
         bandera6 = True
         while bandera6 == True:
             bandera6 = False
-            usuarioCaj=input("1.Iniciar sesión : ")
+            usuarioCaj=input("Ingrese usuario: ")
+            contraseñaCaj=input("Ingrese contraseña: ")
+            for cajero in cajeros:
+                if usuarioCaj==cajeros[0] and contraseñaCaj==cajeros[1]:
+                    print("Bienvenid@ Cajero ;3")
+                    bandera8=True
+                    while bandera8==True:
+                        hacerCaj = input("(Ingrese un número) 1. Pedido, 2. Pedido Nuevo, 3. Pendientes, 4. Volver al menú: ")
+                        bandera9 =False
+                        while bandera9==False:
+                            if hacerCaj=='1':
+                                break
+    
+####################################################################################################   
+
     elif queso=='3':
-        dese2=input("1.iniciar sesion o 2.registrarse : ")
-        if dese2=='1':
-            usuarioUsu=input("Ingrese usuario ")
-            contraseñaUsu=input("Ingrese contraseña ")
-        elif dese2=='2':
-            nombre=input('Ingrese su nombre: ')
-            documento=input('Ingrese su documento:')
-            direccion=input('Ingrese su direccion: ')
-            telefono=input('Ingrese su telefono: ')
+        bandera30=True
+        while bandera30 == True:
+            bandera31=False
+            azul=input("1. Iniciar sesión o 2. Registrarse: ")
+            if azul=='1':
+                bandera31=False
+                usuarioUsu=input("Ingrese usuario: ")
+                contraseñaUsu=input("Ingrese contraseña: ")
+                if buscar_user_pass(usuarios, usuarioUsu, contraseñaUsu):
+                    print("Bienvenid@ usuario <3")
+                    bandera31=True
+                while bandera31==True:
+                    hacerUser = input("(Ingrese un número) 1. Modificar Datos, 2. Pedido Nuevo, 3. Pedido Vigente, 4. Factura, 5. Salir: ")
+                    bandera32=False
+                    while bandera32==False:
+                        if hacerUser=='1':
+                            usuario_azulmodi = input("Confirme usuario a modificar: ")
+                            fila_azulmodi = None
+                            for i, fila in enumerate(usuarios):
+                                if fila[0] == usuario_azulmodi:
+                                    fila_azulmodi = i
+                                    break
+                            if fila_azulmodi is None:
+                                print("El usuario ingresado no existe.")
+                            else:
+                                while 1:
+                                    modificar_nombre = input("Desea modificar el nombre? si/no: ")
+                                    if modificar_nombre.lower() == "si":
+                                        nuevo_nombre = input("Ingrese el nuevo nombre: ")
+                                        nuevo_nombre=verifinombre(nuevo_nombre)
+                                        usuarios[fila_azulmodi][2] = nuevo_nombre
+                                        break
+                                    elif modificar_nombre.lower() == "no":
+                                        break
+
+                                while 1:
+                                    modificar_telefono = input("Desea modificar el teléfono? si/no: ")
+                                    if modificar_telefono.lower() == "si":
+                                        nuevo_telefono = verifitelefono()
+                                        usuarios[fila_azulmodi][4] = nuevo_telefono
+                                        break
+                                    elif modificar_telefono.lower() == "no":
+                                        break
+                                
+                                while 1:
+                                    modificar_direccion = input("Desea modificar la dirección? si/no: ")
+                                    if modificar_direccion.lower() == "si":
+                                        nueva_direccion = input("Ingrese la nueva dirección: ")
+                                        usuarios[fila_azulmodi][5] = nueva_direccion
+                                        break
+                                    elif modificar_direccion.lower() == "no":
+                                        break
+                                print('Sus datos con las modificaciones: ', usuarios[fila_azulmodi])
 
 
 
 
-
+            ####################################################################  
+            elif azul=='2':
+                contadorAzul+=1
+                nombre=input('Ingrese su nombre o 1. Salir: ')
+                nombre = verifinombre(nombre)
+                if nombre != '1':
+                    documento = verifidocum()
+                    telefono = verifitelefono()
+                    direccion=input('Ingrese su dirección: ')
+                    print(autouser_user(nombre, documento, telefono, direccion))
+    
 
