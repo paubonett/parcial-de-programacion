@@ -236,7 +236,7 @@ def eliminarModificarProducto(cualpro):
             if bandera8 == True:
                 num=int(numeropro)-1
                 nup=elimino[1]
-                return nup,elimino[1],caten,num
+                return nup,elimino,caten,num
     elif cualpro == '2':
         mostrarMenuCocteles()
         bandera7 , numberproduct = verificatecocteles()
@@ -292,9 +292,10 @@ def modificarProductoCoctelComida(cualpron):
                 break
         cambiose.append(precioewpro)
         nupi[nume]=cambiose
-        elimino=nupi
+        
+        elimino[1]=nupi
+        
         menu_comidas[caten]=elimino
-        print(menu_comidas[caten])
     elif cualpron=='2':
         nupi,elimino,caten,nume=eliminarModificarProducto('2')
         producto_a_modificar=nupi[nume]
@@ -335,7 +336,9 @@ def modificarProductoCoctelComida(cualpron):
                 precioewpro=list(precioe)
                 break
         cambiose.append(precioewpro)
+        print(nupi[nume])
         nupi[nume]=cambiose
+        print(nupi[nume])
         elimino=nupi
         menu_cocteles[caten]=elimino
         print(menu_cocteles[caten])
@@ -581,13 +584,14 @@ while 1:
                                         banderamodificandoando=True
                                         while banderamodificandoando==True:
                                             cualcatego=input('Ingrese un número: 1. Menú Comidas, 2. Menú Cocteles, 3. Salir: ')
-                                            productoeliminado=[]
+                                            
                                             if cualcatego == '1':
                                                 mostrarMenuComida()
                                                 bandera7 , numberproduct = verificatecomidas()
                                                 if bandera7==True:
-                                                    hola=menu_comidas[int(numberproduct)-1]
-                                                    print(hola)
+                                                    categoriaedicion=menu_comidas[int(numberproduct)-1]
+                                                    nuevocambiose=categoriaedicion[0]
+                                                    print(nuevocambiose)
                                                     
                                                     mostrarMenuComida()
                                                     
