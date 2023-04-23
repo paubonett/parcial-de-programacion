@@ -17,34 +17,34 @@ def imprimir_menu_cocteles(menu_cocteles):
         print()
 
 
-Carnes_Angus_Beef = [['TOMAHWK BEEF', ['-Corte de 1000 gr -Guarnición papa -Yuca al vapor -Cascos de papa -Papas a la francesa -Ensalada pico e’ gallo'], ['Precio $299000']] , ['RIBEYE BEEF', ['-Corte de 400 gr -Papa al vapor -Yuca al vapor -Ensalada pico e’ gallo'], ['Precio $139000']] , ['PICANHA ANGUS BEEF', ['-Corte de 400 gr -Guarnición papa -Yuca al vapor -Cascos de papa -Papas a la francesa -Ensalada pico e’ gallo'], ['Precio $119000']] , ['NEW YORK STEAK BEEF', ['-Lomo Ancho de 400 gr -Guarnición papa -Yuca al vapor -Cascos de papa -Ensalada pico e’ gallo'], ['Precio $129000']], ['ASADO DE TIRA BEEF', ['-Corte de 400 gr'], ['Precio $119000']], ['BIFE DE VACIO BEEF', ['-Pieza de 400 gr'], ['Precio $139000']]]                                                                      
-Entradas = [['NACHOS DAKOTA' ,['-Nachos crocantes -Carne al estilo tex-mex -Queso cheddar americano -Guacamole -Pico e ‘gallo -Frijol refrito'], ['Precio $29000']], ['SAUSAGE OLD WEST ', ['-4 chorizos de ternera -Salsa de whisky Jack Daniel’s -Papas a la francesa'], ['Precio $29000']] , [ 'PAPAS WEST SIDE', ['-Papas a la francesa -Queso cheddar -Chorizo de ternera -Tocineta crunchy'], ['Precio $30000']] , [ 'MAZORQUITAS' ,['-3 Mazorquitas al grill -Cubierta de queso paisa'], ['Precio $21000']] ,  [ 'CAMARONES FORT HAYS',  ['-14 camarones apanados -Guacamole -Dip de tártara -Pimentón rostizado'], ['Precio $32000']] , [ 'MAICITOS' , ['-Maíz dulce -Pollo al grill -Tocineta -Gratinado en queso doble crema y parmesano'], ['Precio $34000']], [ 'ALITAS RANGER', ['-12 piezas de alas -Salsa bbq -Miel -Mostaza -Picantes con papas a la francesa'], ['Precio $34000']]]
-Carnes_Uruguayas_Argentinas = [['TOMAHAWK URUGUAYO' , ['-Corte de 1000 gr -Guarnición de papa -Yuca al vapor -Ensalada pico e’ gallo'], ['Precio $ 190000']] , ['CHULETON ARGENTINO', ['-Ojo de bife con hueso de 800 gr -Guarnición de papa -Yuca al vapor -Ensalada pico e’ gallo'], ['Precio $ 170000']] , ['PORTER HOUSE ARGENTINO', ['-Corte de 800 gr -Guarnición de papa -Yuca al vapor -Ensalada pico e’ gallo'], ['Precio $160000']] , ['BEEF CHORIZO ARGENTINO', ['-Bife angosto de 600 gr -Guarnición de papa -Yuca al vapor -Ensalada pico e’ gallo'], ['Precio $130000']]]
-Carnes_Nacionales=[['PICANHA BACON RANCH', ['-Res al grill de 400 gr -Salsa Jack Daniel’s -Guarnición de papa -Yuca al vapor -Ensalada pico e’ gallo'], ['Precio $64000']], ['PICANHA', ['-Res al grill de 400 gr -Guarnición de papa -Yuca al vapor -Ensalada pico e’ gallo'], ['Precio $62000']], ['CHURRASCO',['-Lomo ancho en corte mariposa de 400 gr -Guarnición papa -Yuca al vapor -Ensalada pico e gallo'], ['Precio $56000' ]], ['BABY BEEF CORN', ['-Lomo Fino de 330 gr -Salsa De Tocineta -Maíz Dulce -Queso Parmesano -Guarnición De Pure De Papa -Mix De Lechugas'], ['Precio $49000']], ['BABY BEEF WESTERN', ['-Lomo Fino de 330 gr -Salsa de champiñones -Guarnición de pure de papa -Mix de lechugas'], ['Precio $46000']], ['BABY BEEF REEWARD', ['-Lomo Fino de 330 gr -Guarnición de papa -Yuca al vapor -Mix de lechugas'], ['Precio $46000']]]
-Cerdo=[['CHICARRON', ['-400 gr de Chicharrón Crocante -Guarnición papa -Yuca al vapor -Chimichurri -Rodajas de limón'], ['Precio $46000']], ['RIBS JACK DANIEL’S', ['-400 gr de costillas de cerdo -Salsa de bbq -Salsa Jack Daniel’s -Guarnición de papas a la francesa -Mix de lechugas'], ['Precio $52000']], ['COSTILLITAS', ['-400 gr de costillitas de cerdo -Salsa bbq -Miel mostaza guarnición -Papas a la francesa -Mix de lechugas'], ['Precio $49000']], ['LOMO DE CERDO', ['Lomo de Cerdo de 330 gr -Salsa bbq -Guarnición de papas a la francesa -Mix de lechugas'], ['Precio $44000']]]
-Hamburguesas=[['ANGUS BURGUER', ['-Carne Angus de 300 gr -Pan brioche -Queso americano -Tocineta -Vegetales en finas hiervas -Cebolla caramelizada -Pepinillos'], ['Precio $49000']], ['JACK DANIELS', ['-Pan brioche -150 gr de carne de res -Salsa Jack Daniels -Chorizo de ternera -Queso cheddar -70gr tocineta ahumada -Tomate horneado -Cebolla caramelizada en vino tinto -Lechuga fresca'], ['Precio $28000']], ['SHERIFF', ['-150 gr de carne de res -120 gr de pullet pork -Pan baguette semi dulce -Salsa showyn -Colslaw -Queso Colby Jack'], ['Precio $28000']], ['LAS VEGAS', ['-150 gr de carne de res -80 gr de brisket ahumado -Pan artesanal -Macarrón cheese -Vegetales frescos'], ['Precio $28000']], ['EL PRIMO CARIM MUSTAFÁ', ['-300 gr de carne de res doble -Pan brioche -Tocineta -Queso monster -Vegetales frescos -Pepinillos -Salsa de tomate heinz -Mayonesa kraft -Mostaza heinz'], ['Precio $33000']], ['HARLEY DAVIDSON', ['-300 gr carne de res triple -Pan brioche -Vegetales frescos -Tocineta -Pepinillo -Queso cheddar -Salsa tártara y showy'], ['Precio $30000']], ['TÍO SAM', ['-100 gr de lomo de cerdo -100 gr de pechuga -150 gr de carne de res -Pan brioche -Tocineta ahumada -Queso cheddar -Vegetales frescos'], ['Precio $32000']], ['LA ROCKERA', ['-150 gr de carne de res -80 gr de brisket ahumado -Pan brioche -Queso pepperjack -Lechuga Batavia -Cebolla morada -Pepinillos'], ['Precio $29000']], ['CLUB HOUSE', ['-160 gr de dip de pollo -150 gr de tocineta -2 huevos -Queso doble crema -Queso chédar americano'], ['Precio $35000']]]
-Brochetas=[['BROCHETA BUFFALO BILL', ['-2 brochetas de lomo de res con 200 gr c/u -Guarnición de papas a la francesa'], ['Precio $49000']], ['BROCHETA APACHE', ['-2 brochetas de 200 gr c/u de pechuga al grill -Guarnición de papas a la francesa'], ['Precio $42000']], ['BROCHETA LEGENS', ['-Brocheta de lomo de res de 200 gr -Brocheta de 200 gr de pechuga al grill -Guarnición de papas a la francesa'], ['Precio $49000']]]
-Pollos=[['MUSHROOM CHICKEN', ['-330 gr de pechuga al grill -Salsa de champiñones -Guarnición de puré de papa -Mix de lechugas'], ['Precio $39000']], ['CORN GRILLED CHICKEN', ['-330 gr de pechuga al grill -Salsa de maíz -Tocineta -Queso parmesano -Guarnición de puré de papa -Mix de lechugas'], ['Precio $39000']], ['GRILLED CHICKEN', ['-330 gr de pechuga al grill -Guarnición papas a la francesa -Papa al vapor -Yuca al vapor -Mix de lechugas'], ['Precio $37000']]]
-Pastas=[['CAMARONERA', ['-250 gr de camarones -Salsa de mostaza dijon -Vino blanco -Pan focaccia -Pasta de fettuccine'], ['Precio $49000']], ['MUSHROOM', ['-200 gr de lomo fino al grill -Fettuccini -Salsa de champiñón -Pan focaccia'], ['Precio $49000']], ['CARBONARA SWEET CORN', ['-230 gr pechuga al grill -Maíz dulce -Tocineta -Pasta fettuccine -Pan focaccia'], ['Precio $47000']]]
-Para_Compartir=[['PICADA OLD WEST', ['-450 gr de pechuga al grill -330 gr de lomo de cerdo -200 gr de lomo fino -2 chorizos de ternera -Ensalada pico e’ gallo -Papas a la francesa -Papa al vapor -Cascos de papa -Yuca al vapor -Queso paisa en cubos'], ['Precio $109000']], ['WILD WEST', ['-400 gr de costillitas de cerdo -Salsa bbq -300 gr de chicharrón crujiente -300 gr de brisket de res ahumado -12 alitas -Salsa bbq -3 mazorquitas -Queso paisa -Macarrón cheese -Papa al vapor -Crotones de tocineta -Mix de lechuga'], ['Precio $119000']]]
-Ensaladas=[['ENSALADA LUSIANA', ['-350 gr pollo crispy o al grill -50 gr tocineta ahumada -Mix de lechugas tomate Cherry -Queso parmesano -Crotones de pan -Aderezo de la casa -Reducción de vinagre balsámico'], ['Precio $34000']], ['ENSALADA DE CAMARONES', ['-300 gr de camarones al crispy -Mix de lechugas -Tomates Cherry -Crotones de pan -Queso parmesano -Aderezo de la casa -Reducción de vinagre balsámico'], ['Precio $36000']]]
-Menu_Infantil_Postres=[['VAQUERITOS BURGUER', ['-Pan brioche -150 gr de carne molida de res -Tocineta -Queso cheddar americano -Papas a la francesa -Juguete infantil'], ['Precio $32000']], ['CHEROKEE CHICKEN', ['-250 gr de pollo apanado -Guarnición de papas a la francesa -Juguete infantil'], ['Precio $32000']], ['TORTA DE CHOCOLATE', ['Precio $12000']], ['LINGOTE DE ORO', ['-Barra de chocolate -Azúcar dorada -Licor dulce -Ganache de frutos secos -Helado artesanal'], ['Precio $19000']]]
+Carnes_Angus_Beef = [['TOMAHWK BEEF', ['-Corte de 1000 gr -Guarnición papa -Yuca al vapor -Cascos de papa -Papas a la francesa -Ensalada pico e’ gallo'], ['Precio $299000'], "1101"] , ['RIBEYE BEEF', ['-Corte de 400 gr -Papa al vapor -Yuca al vapor -Ensalada pico e’ gallo'], ['Precio $139000'],  "1102"] , ['PICANHA ANGUS BEEF', ['-Corte de 400 gr -Guarnición papa -Yuca al vapor -Cascos de papa -Papas a la francesa -Ensalada pico e’ gallo'], ['Precio $119000'], "1103"] , ['NEW YORK STEAK BEEF', ['-Lomo Ancho de 400 gr -Guarnición papa -Yuca al vapor -Cascos de papa -Ensalada pico e’ gallo'], ['Precio $129000'], "1104"], ['ASADO DE TIRA BEEF', ['-Corte de 400 gr'], ['Precio $119000'], "1105"], ['BIFE DE VACIO BEEF', ['-Pieza de 400 gr'], ['Precio $139000'], "1106"]]                                                                      
+Entradas = [['NACHOS DAKOTA' ,['-Nachos crocantes -Carne al estilo tex-mex -Queso cheddar americano -Guacamole -Pico e ‘gallo -Frijol refrito'], ['Precio $29000'], "1107"], ['SAUSAGE OLD WEST ', ['-4 chorizos de ternera -Salsa de whisky Jack Daniel’s -Papas a la francesa'], ['Precio $29000'], "1108"] , [ 'PAPAS WEST SIDE', ['-Papas a la francesa -Queso cheddar -Chorizo de ternera -Tocineta crunchy'], ['Precio $30000'], "1109"] , [ 'MAZORQUITAS' ,['-3 Mazorquitas al grill -Cubierta de queso paisa'], ['Precio $21000'], "1110"] ,  [ 'CAMARONES FORT HAYS',  ['-14 camarones apanados -Guacamole -Dip de tártara -Pimentón rostizado'], ['Precio $32000'],  "1111"] , [ 'MAICITOS' , ['-Maíz dulce -Pollo al grill -Tocineta -Gratinado en queso doble crema y parmesano'], ['Precio $34000'],  "1112"], [ 'ALITAS RANGER', ['-12 piezas de alas -Salsa bbq -Miel -Mostaza -Picantes con papas a la francesa'], ['Precio $34000'],  "1113"]]
+Carnes_Uruguayas_Argentinas = [['TOMAHAWK URUGUAYO' , ['-Corte de 1000 gr -Guarnición de papa -Yuca al vapor -Ensalada pico e’ gallo'], ['Precio $ 190000'],  "1114"] , ['CHULETON ARGENTINO', ['-Ojo de bife con hueso de 800 gr -Guarnición de papa -Yuca al vapor -Ensalada pico e’ gallo'], ['Precio $ 170000'],  "1115"] , ['PORTER HOUSE ARGENTINO', ['-Corte de 800 gr -Guarnición de papa -Yuca al vapor -Ensalada pico e’ gallo'], ['Precio $160000'],  "1116" ] , ['BEEF CHORIZO ARGENTINO', ['-Bife angosto de 600 gr -Guarnición de papa -Yuca al vapor -Ensalada pico e’ gallo'], ['Precio $130000'],  "1117" ]]
+Carnes_Nacionales=[['PICANHA BACON RANCH', ['-Res al grill de 400 gr -Salsa Jack Daniel’s -Guarnición de papa -Yuca al vapor -Ensalada pico e’ gallo'], ['Precio $64000'], "1118"], ['PICANHA', ['-Res al grill de 400 gr -Guarnición de papa -Yuca al vapor -Ensalada pico e’ gallo'], ['Precio $62000'],  "1119"], ['CHURRASCO',['-Lomo ancho en corte mariposa de 400 gr -Guarnición papa -Yuca al vapor -Ensalada pico e gallo'], ['Precio $56000' ],  "1120" ], ['BABY BEEF CORN', ['-Lomo Fino de 330 gr -Salsa De Tocineta -Maíz Dulce -Queso Parmesano -Guarnición De Pure De Papa -Mix De Lechugas'], ['Precio $49000'],  "1121"], ['BABY BEEF WESTERN', ['-Lomo Fino de 330 gr -Salsa de champiñones -Guarnición de pure de papa -Mix de lechugas'], ['Precio $46000'],  "1122"], ['BABY BEEF REEWARD', ['-Lomo Fino de 330 gr -Guarnición de papa -Yuca al vapor -Mix de lechugas'], ['Precio $46000'],  "1123"]]
+Cerdo=[['CHICARRON', ['-400 gr de Chicharrón Crocante -Guarnición papa -Yuca al vapor -Chimichurri -Rodajas de limón'], ['Precio $46000'],  "1124"], ['RIBS JACK DANIEL’S', ['-400 gr de costillas de cerdo -Salsa de bbq -Salsa Jack Daniel’s -Guarnición de papas a la francesa -Mix de lechugas'], ['Precio $52000'],  "1125"], ['COSTILLITAS', ['-400 gr de costillitas de cerdo -Salsa bbq -Miel mostaza guarnición -Papas a la francesa -Mix de lechugas'], ['Precio $49000'],  "1126"], ['LOMO DE CERDO', ['Lomo de Cerdo de 330 gr -Salsa bbq -Guarnición de papas a la francesa -Mix de lechugas'], ['Precio $44000'],  "1127"]]
+Hamburguesas=[['ANGUS BURGUER', ['-Carne Angus de 300 gr -Pan brioche -Queso americano -Tocineta -Vegetales en finas hiervas -Cebolla caramelizada -Pepinillos'], ['Precio $49000'],  "1128" ], ['JACK DANIELS', ['-Pan brioche -150 gr de carne de res -Salsa Jack Daniels -Chorizo de ternera -Queso cheddar -70gr tocineta ahumada -Tomate horneado -Cebolla caramelizada en vino tinto -Lechuga fresca'], ['Precio $28000'],  "1129"], ['SHERIFF', ['-150 gr de carne de res -120 gr de pullet pork -Pan baguette semi dulce -Salsa showyn -Colslaw -Queso Colby Jack'], ['Precio $28000'],  "1130" ], ['LAS VEGAS', ['-150 gr de carne de res -80 gr de brisket ahumado -Pan artesanal -Macarrón cheese -Vegetales frescos'], ['Precio $28000'],  "1131" ], ['EL PRIMO CARIM MUSTAFÁ', ['-300 gr de carne de res doble -Pan brioche -Tocineta -Queso monster -Vegetales frescos -Pepinillos -Salsa de tomate heinz -Mayonesa kraft -Mostaza heinz'], ['Precio $33000'],  "1132"], ['HARLEY DAVIDSON', ['-300 gr carne de res triple -Pan brioche -Vegetales frescos -Tocineta -Pepinillo -Queso cheddar -Salsa tártara y showy'], ['Precio $30000'],  "1133"], ['TÍO SAM', ['-100 gr de lomo de cerdo -100 gr de pechuga -150 gr de carne de res -Pan brioche -Tocineta ahumada -Queso cheddar -Vegetales frescos'], ['Precio $32000'],  "1134"], ['LA ROCKERA', ['-150 gr de carne de res -80 gr de brisket ahumado -Pan brioche -Queso pepperjack -Lechuga Batavia -Cebolla morada -Pepinillos'], ['Precio $29000'],  "1135"], ['CLUB HOUSE', ['-160 gr de dip de pollo -150 gr de tocineta -2 huevos -Queso doble crema -Queso chédar americano'], ['Precio $35000'],  "1136"]]
+Brochetas=[['BROCHETA BUFFALO BILL', ['-2 brochetas de lomo de res con 200 gr c/u -Guarnición de papas a la francesa'], ['Precio $49000'],  "1137"], ['BROCHETA APACHE', ['-2 brochetas de 200 gr c/u de pechuga al grill -Guarnición de papas a la francesa'], ['Precio $42000'],  "1138"], ['BROCHETA LEGENS', ['-Brocheta de lomo de res de 200 gr -Brocheta de 200 gr de pechuga al grill -Guarnición de papas a la francesa'], ['Precio $49000'],  "1139"]]
+Pollos=[['MUSHROOM CHICKEN', ['-330 gr de pechuga al grill -Salsa de champiñones -Guarnición de puré de papa -Mix de lechugas'], ['Precio $39000'],  "1140" ], ['CORN GRILLED CHICKEN', ['-330 gr de pechuga al grill -Salsa de maíz -Tocineta -Queso parmesano -Guarnición de puré de papa -Mix de lechugas'], ['Precio $39000'],  "1141"], ['GRILLED CHICKEN', ['-330 gr de pechuga al grill -Guarnición papas a la francesa -Papa al vapor -Yuca al vapor -Mix de lechugas'], ['Precio $37000'],  "1142"]]
+Pastas=[['CAMARONERA', ['-250 gr de camarones -Salsa de mostaza dijon -Vino blanco -Pan focaccia -Pasta de fettuccine'], ['Precio $49000'],  "1143"], ['MUSHROOM', ['-200 gr de lomo fino al grill -Fettuccini -Salsa de champiñón -Pan focaccia'], ['Precio $49000'],  "1144"], ['CARBONARA SWEET CORN', ['-230 gr pechuga al grill -Maíz dulce -Tocineta -Pasta fettuccine -Pan focaccia'], ['Precio $47000'],  "1145"]]
+Para_Compartir=[['PICADA OLD WEST', ['-450 gr de pechuga al grill -330 gr de lomo de cerdo -200 gr de lomo fino -2 chorizos de ternera -Ensalada pico e’ gallo -Papas a la francesa -Papa al vapor -Cascos de papa -Yuca al vapor -Queso paisa en cubos'], ['Precio $109000'],  "1146"], ['WILD WEST', ['-400 gr de costillitas de cerdo -Salsa bbq -300 gr de chicharrón crujiente -300 gr de brisket de res ahumado -12 alitas -Salsa bbq -3 mazorquitas -Queso paisa -Macarrón cheese -Papa al vapor -Crotones de tocineta -Mix de lechuga'], ['Precio $119000'],  "1147"]]
+Ensaladas=[['ENSALADA LUSIANA', ['-350 gr pollo crispy o al grill -50 gr tocineta ahumada -Mix de lechugas tomate Cherry -Queso parmesano -Crotones de pan -Aderezo de la casa -Reducción de vinagre balsámico'], ['Precio $34000'],  "1148"], ['ENSALADA DE CAMARONES', ['-300 gr de camarones al crispy -Mix de lechugas -Tomates Cherry -Crotones de pan -Queso parmesano -Aderezo de la casa -Reducción de vinagre balsámico'], ['Precio $36000'],  "1149"]]
+Menu_Infantil_Postres=[['VAQUERITOS BURGUER', ['-Pan brioche -150 gr de carne molida de res -Tocineta -Queso cheddar americano -Papas a la francesa -Juguete infantil'], ['Precio $32000'],  "1150" ], ['CHEROKEE CHICKEN', ['-250 gr de pollo apanado -Guarnición de papas a la francesa -Juguete infantil'], ['Precio $32000'],  "1151" ], ['TORTA DE CHOCOLATE',[""], ['Precio $12000'],  "1152"], ['LINGOTE DE ORO', ['-Barra de chocolate -Azúcar dorada -Licor dulce -Ganache de frutos secos -Helado artesanal'], ['Precio $19000'],  "1153"]]
 
 
-Cocteles_de_Autor=[['TORO SENTADO', ['-Whisky Red label -Licor de café -Vino embajador -Cerveza club negral -Piña -Naranja'], ['Precio $28000']], ['BILLY THE KID', ['-Jack Daniels Honey  -Jaguermeister -Crema de coco'], ['Precio $32000']], ['CALIBRE 38', ['-Whisky Jack Daniel No 7 -Limon -Syrop de frutos rojos -Syrop simple -Ginger'], ['Precio $32000']], ['BONNIE & CLYDE', ['-Ron de coco -Jägermeister -Syrop frutos amarillos -Shrup de piña -Jarabe de genjibre -Limón'], ['Precio $32000']], ['JHON WESLY', ['-Tequila Reposado -Ron coco -Syrop de maracuya -Shrup de piña -Ginger'], ['Precio $30000']], ['JESSE JAMES', ['-Ron blanco -Curacao azul -Syrop de piña -Syrop de maracuya -Ginger'], ['Precio $30000']], ['SE BUSCA', ['-Vodka -Limón -Syrop de lychhe -Vino Rosado lambrusco -Syrop de frutos rojos'], ['Precio $32000']], ['INMORTAL JACK', ['-Jack Daniel No 7 Botellita -Licor de melon -Jarabe de jengibre -Zumo de  limon -Licor de durazno -Jägermeister'], ['Precio $34000']], ['GIN CAKTUS', ['-Ginebra -Infusión de pepino -Tonica nacional'], ['Precio $30000']]]
-Bebidas_Especiales=[['SODAS', ['-Frutos amarillos -Frutos rojos'], ['Precio $10000']], ['SODAS 2', ['-Frutos Azules'], ['Precio $12000']], ['LIMONADAS', ['-Limonada Cerezada -Coco Limonada -Limonada Hierba Buena'], ['Precio $11000']], ['LIMONADA DE ROSAS', ['Precio $24000']], ['FRAPPES', ['-Naranja -Maracuyá -Limón'], ['Precio $9000']]]
-Bebidas=[['AGUA', ['Precio $5000']], ['COCA-COLA PET 400ML', ['Precio $6000']], ['COCA-COLA ZERO PET 400ML', ['Precio $6000']], ['GASEOSAS QUATRO - KOLA ROMAN', ['Precio $5000']], ['GINGER - SODA', ['Precio $6000']], ['REDBULL', ['Precio $10000']]]
-Cervezas_Importadas=[['ERDINGER WEISSBIER', ['Precio $32000']], ['ERDINGER DUNKEL', ['Precio $32000']], ['ERDINGER PIKANTUS', ['Precio $38000']], ['TROOPER BEER IRON MAIDEN', ['Precio $32000']], ['CERVEZA ACDC', ['Precio $32000']], ['BUDWEISER 250ML', ['Precio $8000']], ['HEINEKEN', ['Precio $10000']], ['CORONA', ['Precio $12000']], ['SMIRNOFF ICE 275ML', ['Precio $15000']], ['SMIRNOFF ICE 275ML APPLE', ['Precio $15000']]]
-Cervezas=[['CERVEZA ARTESANAL OLDWEST', ['Precio $10000']], ['CERVEZA AGUILA', ['Precio $7000']], ['CERVEZA AGUILA LIGHT', ['Precio $7000']], ['CERVEZA POKER', ['Precio $7000']], ['CERVEZA CLUB COLOMBIA', ['-Roja -Negra -Dorada -Doble Malta'], ['Precio $8000']]]
-Sangrias=[['JARRA ROSADA', ['-Fresas -Hierba Buena -Cereza -Uvas Isabelina'], ['Precio $110000']], ['JARRA AZUL', ['-Fresas -Arandanos -Uva Isabelina -Lycehes'], ['Precio $110000']], ['JARRA TINTO', ['-Fresas -Uvas -Naranja -Cereza -Uva Isabelina'], ['Precio $110000']], ['COPA DE SANGRÍA', ['Precio $30000']]]
-Whisky=[['CREMA DE WHISKY - BAILEYS 375 ML', ['Precio $80000']], ['CREMA DE WHISKY - BAILEYS 700 ML', ['Precio $130000']], ['BLACK Y WHITE', ['Precio $120000']], ['BUCHANANS 12 AÑOS 375 ML', ['Precio $175000']], ['BUCHANANS 12 AÑOS 750 ML DELUXE', ['Precio $250000']], ['BUCHANANS 18 AÑOS 750 ML', ['Precio $470000']], ['BUCHANNAS MASTER 750 ML', ['Precio $320000']], ['MINI JACK DANIELS 50 ML', ['Precio $25000']], ['JACK DANIELS 375ML', ['Precio $160000']], ['JACK DANIEL’S TENNESSE 750 ML', ['Precio $280000']], ['JACK DANIEL’S HONEY 750 ML', ['Precio $280000']], ['JACK DANIEL’S TENNESSE FIRE 750 ML', ['Precio $280000']], ['JHONNIE WALKER RED LABEL 750 ML', ['Precio $150000']], ['JHONNIE WALKER BLACK LABEL 750 ML', ['Precio $240000']], ['MACALLAN 12 DOUBLE CASK 700 ML', ['Precio $600000']], ['OLD PARR 12 AÑOS 500 ML', ['Precio $180000']], ['OLD PARR 12 AÑOS 750 ML', ['Precio $220000']]]
-Champagne=[['JP ROSE ICE CHENET 750 ML', ['Precio $110000']], ['JP CHENET ICE EDTION 750 ML', ['Precio $110000']]]
-Vino=[['COPA DE VINO', ['Precio 15000']], ['VINO TARAPACA 750 ML', ['Precio 70000']], ['VINO SANTA CAROLINA 750 ML', ['Precio 70000']], ['VINO LAMBRUSCO ROSATO 750 ML', ['Precio $80000']], ['VINO LAMBRUSCO BLANCO 750 ML', ['Precio $80000']]]
-Ginebra=[['GINEBRA GORDONS PREMIUM PINK', ['Precio $140000']], ['GINEBRA TANQUERAY 750 ML', ['Precio $190000']], ['GINEBRA BOMBAY 750 ML', ['Precio $220000']], ['GINEBRA TANQUERAY RANGPUR 750 ML', ['Precio $260000']], ['GINEBRA MON 750 ML', ['Precio $320000']], ['GIN MARE 750 ML', ['Precio $390000']], ['FIFTY POUNDS 750ML', ['Precio $360000']], ['BOSQUE DE INDIAS 700ML', ['Precio $160000']], ['BEEFEATER 750ML', ['Precio $220000']]] 
-Vodka=[['MINI VODKA ABSOLUT 50 ML', ['Precio $21000']], ['VODKA ABSOLUT 375 ML', ['Precio $99000']], ['VODKA ABSOLUT 750ML', ['Precio $180000']], ['VODKA SMIRNOFF 750 ML', ['Precio $160000']]]
-Tequila=[['JOSE CUERVO REPOSADO 375 ML', ['Precio $90000']], ['JOSE CUERVO REPOSADO 750ML', ['Precio $180000']], ['JOSE CUERVO SILVER 750ML', ['Precio $170000']], ['DON JULIO BLANCO 700 ML', ['Precio $350000']], ['DON JULIO REPOSADO 700 ML', ['Precio $420000']], ['DON JULIO AÑEJO 750 ML', ['Precio $450000']], ['TEQUILA PATRON SILVER 750 ML', ['Precio $410000']], ['TEQUILA PATRON REPOSADO 750 ML', ['Precio $420000']]]
-Ron=[['RON VIEJO DE CALDAS 375 ML', ['Precio $60000']], ['RON VIEJO DE CALDAS 750 ML', ['Precio $110000']], ['RON BACARDI AÑEJO 750 ML', ['Precio $130000']], ['RON ZACAPA 23 750 ML', ['Precio $420000']]]
-Aguardiente=[['AGUARDIENTE ANTIOQUEÑO 375 ML', ['Precio $60000']], ['AGUARDIENTE ANTIOQUEÑO TAPA AZUL', ['Precio $110000']]]
+Cocteles_de_Autor=[['TORO SENTADO', ['-Whisky Red label -Licor de café -Vino embajador -Cerveza club negral -Piña -Naranja'], ['Precio $28000'],  "2101" ], ['BILLY THE KID', ['-Jack Daniels Honey  -Jaguermeister -Crema de coco'], ['Precio $32000'],  "2102" ], ['CALIBRE 38', ['-Whisky Jack Daniel No 7 -Limon -Syrop de frutos rojos -Syrop simple -Ginger'], ['Precio $32000'],  "2103"], ['BONNIE & CLYDE', ['-Ron de coco -Jägermeister -Syrop frutos amarillos -Shrup de piña -Jarabe de genjibre -Limón'], ['Precio $32000'],  "2104"], ['JHON WESLY', ['-Tequila Reposado -Ron coco -Syrop de maracuya -Shrup de piña -Ginger'], ['Precio $30000'],  "2105"], ['JESSE JAMES', ['-Ron blanco -Curacao azul -Syrop de piña -Syrop de maracuya -Ginger'], ['Precio $30000'],  "2106"], ['SE BUSCA', ['-Vodka -Limón -Syrop de lychhe -Vino Rosado lambrusco -Syrop de frutos rojos'], ['Precio $32000'],  "2107"], ['INMORTAL JACK', ['-Jack Daniel No 7 Botellita -Licor de melon -Jarabe de jengibre -Zumo de  limon -Licor de durazno -Jägermeister'], ['Precio $34000'],  "2108"], ['GIN CAKTUS', ['-Ginebra -Infusión de pepino -Tonica nacional'], ['Precio $30000'],  "2109"]]
+Bebidas_Especiales=[['SODAS', ['-Frutos amarillos -Frutos rojos'], ['Precio $10000'], "2110" ], ['SODAS 2', ['-Frutos Azules'], ['Precio $12000'], "2111"], ['LIMONADAS', ['-Limonada Cerezada -Coco Limonada -Limonada Hierba Buena'], ['Precio $11000'], "2112"], ['LIMONADA DE ROSAS', ["-Limonada de rosas"], ['Precio $24000'], "2113"], ['FRAPPES', ['-Naranja -Maracuyá -Limón'], ['Precio $9000'], "2114"]]
+Bebidas=[['AGUA', [""], ['Precio $5000'], "2115"], ['COCA-COLA PET 400ML',[""],  ['Precio $6000'], "2116"], ['COCA-COLA ZERO PET 400ML', [""], ['Precio $6000'], "2117" ], ['GASEOSAS QUATRO - KOLA ROMAN', [""], ['Precio $5000'], "2118"], ['GINGER - SODA',[""], ['Precio $6000'], "2119"], ['REDBULL', [""], ['Precio $10000'], "2120" ]]
+Cervezas_Importadas=[['ERDINGER WEISSBIER', [""], ['Precio $32000'], "2121" ], ['ERDINGER DUNKEL',[""], ['Precio $32000'], "2122"], ['ERDINGER PIKANTUS', [""], ['Precio $38000'], "2123"], ['TROOPER BEER IRON MAIDEN', [""], ['Precio $32000'], "2124"], ['CERVEZA ACDC', [""], ['Precio $32000'], "2125"], ['BUDWEISER 250ML',[""], ['Precio $8000'] , "2126"], ['HEINEKEN', [""], ['Precio $10000'], "2127"], ['CORONA', [""], ['Precio $12000'], "2128"], ['SMIRNOFF ICE 275ML', [""], ['Precio $15000'], "2129"], ['SMIRNOFF ICE 275ML APPLE', [""], ['Precio $15000'], "2130" ]]
+Cervezas=[['CERVEZA ARTESANAL OLDWEST', [""], ['Precio $10000'], "2131"], ['CERVEZA AGUILA', [""], ['Precio $7000'] , "2132"], ['CERVEZA AGUILA LIGHT', [""], ['Precio $7000'], "2133"], ['CERVEZA POKER', [""], ['Precio $7000'], "2134"], ['CERVEZA CLUB COLOMBIA', ['-Roja -Negra -Dorada -Doble Malta'], ['Precio $8000'] , "2135"]]
+Sangrias=[['JARRA ROSADA', ['-Fresas -Hierba Buena -Cereza -Uvas Isabelina'], ['Precio $110000'] , "2136"], ['JARRA AZUL', ['-Fresas -Arandanos -Uva Isabelina -Lycehes'], ['Precio $110000'], "2137"], ['JARRA TINTO', ['-Fresas -Uvas -Naranja -Cereza -Uva Isabelina'], ['Precio $110000'], "2138"], ['COPA DE SANGRÍA', [""], ['Precio $30000'], "2139"]]
+Whisky=[['CREMA DE WHISKY - BAILEYS 375 ML',[""], ['Precio $80000'], "2140"], ['CREMA DE WHISKY - BAILEYS 700 ML', [""], ['Precio $130000'], "2141"], ['BLACK Y WHITE', [""], ['Precio $120000'], "2142" ], ['BUCHANANS 12 AÑOS 375 ML', [" "], ['Precio $175000'], "2143"], ['BUCHANANS 12 AÑOS 750 ML DELUXE', [""], ['Precio $250000'], "2144"], ['BUCHANANS 18 AÑOS 750 ML',[""], ['Precio $470000'], "2145"], ['BUCHANNAS MASTER 750 ML', [""], ['Precio $320000'], "2146"], ['MINI JACK DANIELS 50 ML', [""], ['Precio $25000'] , "2147"], ['JACK DANIELS 375ML', [""], ['Precio $160000'], "2148"], ['JACK DANIEL’S TENNESSE 750 ML', [""], ['Precio $280000'], "2149"], ['JACK DANIEL’S HONEY 750 ML', [""], ['Precio $280000'], "2150" ], ['JACK DANIEL’S TENNESSE FIRE 750 ML', [""], ['Precio $280000'], "2151"], ['JHONNIE WALKER RED LABEL 750 ML', [""], ['Precio $150000'] , "2152"], ['JHONNIE WALKER BLACK LABEL 750 ML', [""], ['Precio $240000'], "2153"], ['MACALLAN 12 DOUBLE CASK 700 ML', [""], ['Precio $600000'] , "2154"], ['OLD PARR 12 AÑOS 500 ML', [""], ['Precio $180000'], "2155"], ['OLD PARR 12 AÑOS 750 ML', [""], ['Precio $220000'], "2156"]]
+Champagne=[['JP ROSE ICE CHENET 750 ML', [""], ['Precio $110000'], "2157"], ['JP CHENET ICE EDTION 750 ML', [""], ['Precio $110000'], "2158"]]
+Vino=[['COPA DE VINO', [""], ['Precio 15000'], "2159"], ['VINO TARAPACA 750 ML', [""], ['Precio 70000'], "2160" ], ['VINO SANTA CAROLINA 750 ML', [""], ['Precio 70000'], "2161"], ['VINO LAMBRUSCO ROSATO 750 ML',[""], ['Precio $80000'], "2162"], ['VINO LAMBRUSCO BLANCO 750 ML', [""], ['Precio $80000'], "2163"]]
+Ginebra=[['GINEBRA GORDONS PREMIUM PINK', [""], ['Precio $140000'], "2164"], ['GINEBRA TANQUERAY 750 ML', [""], ['Precio $190000'], "2165"], ['GINEBRA BOMBAY 750 ML', [""], ['Precio $220000'], "2166"], ['GINEBRA TANQUERAY RANGPUR 750 ML', [" "], ['Precio $260000'], "2167"], ['GINEBRA MON 750 ML', [""], ['Precio $320000'], "2168"], ['GIN MARE 750 ML', [""], ['Precio $390000'], "2169"], ['FIFTY POUNDS 750ML',[""], ['Precio $360000'], "2170" ], ['BOSQUE DE INDIAS 700ML',[""], ['Precio $160000'], "2171"], ['BEEFEATER 750ML', [""], ['Precio $220000'], "2172"]] 
+Vodka=[['MINI VODKA ABSOLUT 50 ML', [""], ['Precio $21000'], "2173"], ['VODKA ABSOLUT 375 ML', [""], ['Precio $99000'], "2174"], ['VODKA ABSOLUT 750ML', [""], ['Precio $180000'], "2175"], ['VODKA SMIRNOFF 750 ML', [""], ['Precio $160000'], "2176"]]
+Tequila=[['JOSE CUERVO REPOSADO 375 ML',[""], ['Precio $90000'], "2177"], ['JOSE CUERVO REPOSADO 750ML', [""], ['Precio $180000'], "2178"], ['JOSE CUERVO SILVER 750ML', [""], ['Precio $170000'], "2179"], ['DON JULIO BLANCO 700 ML', [""], ['Precio $350000'], "2180" ], ['DON JULIO REPOSADO 700 ML', [""], ['Precio $420000'], "2181"], ['DON JULIO AÑEJO 750 ML', [""], ['Precio $450000'], "2182"], ['TEQUILA PATRON SILVER 750 ML', [""], ['Precio $410000'], "2183"], ['TEQUILA PATRON REPOSADO 750 ML', [""], ['Precio $420000'], "2184"]]
+Ron=[['RON VIEJO DE CALDAS 375 ML', [""] , ['Precio $60000'], "2185"], ['RON VIEJO DE CALDAS 750 ML', [""], ['Precio $110000'], "2186"], ['RON BACARDI AÑEJO 750 ML',[""], ['Precio $130000'], "2187"], ['RON ZACAPA 23 750 ML', [""], ['Precio $420000'], "2188"]]
+Aguardiente=[['AGUARDIENTE ANTIOQUEÑO 375 ML', [""], ['Precio $60000'], "2189"], ['AGUARDIENTE ANTIOQUEÑO TAPA AZUL', [""], ['Precio $110000'], "2190"]]
 
 
 menu_comidas = [['Carnes Angus Beef', Carnes_Angus_Beef], ['Entradas', Entradas], ['Carnes Uruguayas y Argentinas', Carnes_Uruguayas_Argentinas], ['Carnes Nacionales', Carnes_Nacionales], ['Cerdo', Cerdo], ['Burgers', Hamburguesas], ['Brochetas', Brochetas], ['Pollos', Pollos], ['Pastas', Pastas], ['Para Compartir', Para_Compartir], ['Ensaladas', Ensaladas], ['Menu Infantil Postres', Menu_Infantil_Postres]]
@@ -54,8 +54,8 @@ menu_cocteles=[['Cocteles de Autor', Cocteles_de_Autor], ['Bebidas Especiales', 
 contador2=3
 
 
-PedidosVentas = []
-contadorPedidos = len(PedidosVentas)
+PedidosPendientes = []
+contadorPedidos = len(PedidosPendientes)
 
 
 
@@ -82,12 +82,23 @@ def comprarComida ():
                         print(nombre)      
                         print( ','.join(menu_comidas[numberproduct-1][1][producto-1][1]))
                         print(','.join(menu_comidas[numberproduct-1][1][producto-1][2]))
+                        number = str(menu_comidas[numberproduct-1][1][producto-1][3])
                         while 1 :
                             aña = input("(si) Añadir producto, (no) Salir   ")
                             if aña.lower() == "si":
+                                if int(number) >= 1128 and int(number) <= 1136:
+                                    while 1 :
+                                        papas = input("¿En combo con papa a la francesa? $3.000  (si) - (no)")
+                                        if papas.lower() == "si":
+                                            nombre  = nombre + " combo"
+                                            break
+                                        elif papas.lower() == "no":
+                                            break
                                 productos.append(nombre)
+                                bandera9 = False
                                 break
                             elif aña.lower() == "no":
+                                bandera9 = False
                                 break
                     elif contador+5 == producto:
                         bandera9 = False
@@ -171,7 +182,7 @@ def mostrarMenuComida():
 def verificatecocteles (): 
     while 1:
         try :
-            numberproduct= int(input('Ingrese número de la categoría en la que desea hacer un cambio o ' + str(len(menu_cocteles)+5) + " para salir:  "  ))
+            numberproduct= int(input('Ingrese número de la categoría o ' + str(len(menu_cocteles)+5) + " para salir:  "  ))
             if numberproduct <= len(menu_cocteles) and numberproduct >= 1:
                 bandera7 = True
                 return bandera7, numberproduct 
@@ -244,7 +255,123 @@ def mostarSubmenuProductoCocteles(numberproduct):
     for mostrar in nuevo:
         contador+=1
         print(contador, '->',mostrar[0])
-    
+    return contador
+
+def comprarCocteles ():
+    productos = []
+    while 1 :
+        mostrarMenuCocteles()
+        bandera7 , numberproduct = verificatecocteles()
+        if bandera7 == True:
+            contador = mostarSubmenuProductoCocteles(numberproduct)
+            bandera9 = True
+            while bandera9==True:
+                try :
+                    producto = int(input("Ingrese un número para ver la descripción del producto o " + str(contador + 5) + ". Ver submenú, " + str(contador + 6) + ". Salir  "))
+                    if producto <= contador and producto > 0 :
+                        nombre = str(menu_cocteles[numberproduct-1][1][producto-1][0])
+                        print(nombre)      
+                        print( ','.join(menu_cocteles[numberproduct-1][1][producto-1][1]))
+                        print(','.join(menu_cocteles[numberproduct-1][1][producto-1][2]))
+                        number = int(menu_cocteles[numberproduct-1][1][producto-1][3])
+                        while 1 :
+                            aña = input("(si) Añadir producto, (no) Salir  ")
+                            if aña.lower() == "si":
+                                nombre = opcio (number, nombre)                                    
+                                productos.append(nombre)
+                                bandera9 = False
+                                break
+                            elif aña.lower() == "no":
+                                bandera9 = False
+                                break
+                    elif contador+5 == producto:
+                        bandera9 = False
+                    elif contador+6 == producto:
+                        bandera7 = False
+                        bandera9 = False
+                except ValueError:
+                    print("Ingrese un número  ")  
+        if bandera7 == False:
+            break
+    if productos == []:
+        print("No se guardo ninguna bebida en el pedido ")
+    elif productos != []: 
+        return productos
+
+
+def opcio (number, nombre):    
+    while 1:
+        if number == 2112 :
+            try:
+                sabor = int(input("¿Qué sabor desea?: 1. Limonada Cerezada, 2. Coco Limonada, 3. Limonada Hierba Buena    "))
+                if int(sabor) == 1:
+                    nombre = nombre + " -limonada cerezada"
+                    break
+                elif int(sabor) == 2:
+                    nombre = nombre + " -coco limonada"
+                    break
+                elif int(sabor) == 3:
+                    nombre = nombre + " -hierva buena"
+                    break
+            except ValueError:
+                print("Ingrese un número")
+        elif number == 2114:
+            try :
+                sabor = int(input("¿Qué sabor desea?: 1. Naranja, 2. Maracuyá, 3. Limón"))
+                if sabor == 1:
+                    nombre = nombre + " -naranja"
+                    break
+                elif sabor == 2:
+                    nombre = nombre + " -maracuyá" 
+                    break
+                elif sabor == 3:
+                    nombre = nombre + " -limón"
+                    break
+            except ValueError:
+                print("Ingrese un número")
+        elif number == 2118:
+            try:
+                sabor = int(input("¿Qué sabor desea?: 1. GASEOSAS QUATRO, 2. KOLA ROMAN "))
+                if sabor == 1:
+                    nombre = nombre + " -gaseosas quatro"
+                    break
+                elif sabor == 2:
+                    nombre = nombre + " -kola roman"
+                    break
+            except ValueError:
+                print("Ingrese un número")
+        elif number == 2119:
+            try:
+                sabor = int(input("¿Qué sabor desea?: 1. GINGER, 2. SODA "))
+                if sabor == 1:
+                    nombre = nombre + " -ginger" 
+                    break
+                if sabor == 2:
+                    nombre = nombre + " -soda"
+                    break
+            except ValueError:
+                print("Ingrese un número")
+        elif number == 2135:
+            try:
+                sabor = int(input("¿Qué sabor desea?: 1. Roja, 2. Negra, 3. Dorada, 4. Doble Malta"))
+                if sabor == 1:
+                    nombre = nombre + " -roja"
+                    break
+                elif sabor == 2:
+                    nombre = nombre + " -negra"
+                    break
+                elif sabor == 3:
+                    nombre = nombre + " -dorada"
+                    break
+                elif sabor == 4:
+                    nombre = nombre + " -doble malta"
+                    break
+            except ValueError:
+                print("Ingrese un número")
+        else:
+            break
+    return nombre
+
 
 
 ####################################################################################################
@@ -497,50 +624,68 @@ while 1:
             if bandera8 == False:
                 print("Usuario o contraseña incorrecta")
             while bandera8==True:
-                hacerCaj = input("(Ingrese un número) 1. Pedido, 2. Pedido Nuevo, 3. Pendientes, 4. Volver al menú: ")
-                bandera9 =False
-                while bandera9==False:
-                    if hacerCaj=='1':
-                        print("Hola")
-                        break
-                    elif hacerCaj == "2":
-                        while 1: 
-                            pedido = []
-                            quemenu = input("¿Como desea hacer el pedido? 1. Ver menú, 2.Ingresar código, 3. Salir  ")
-                            if quemenu == "1":
-                                while 1 :
-                                    cualmenu3 = input("1. Menú comidas, 2. Menú cocteles, 3. Confirmar pedido, 4. Salir  ") 
-                                    bandera9 = True
-                                    if cualmenu3 == "1":
-                                        productos = comprarComida()
-                                        if productos != None:
-                                            cambio = contodo ()
-                                            pedido.append(productos)
-                                            pedido.append(cambio)
+                try:
+                    hacerCaj = int(input("(Ingrese un número) 1. Pedido, 2. Pedido Nuevo, 3. Pendientes, 4. Volver al menú: "))
+                    bandera9 =False
+                    while bandera9==False:
+                        if hacerCaj==1:
+                            print("Hola")
+                            print(PedidosPendientes)
+                            break
+                        elif hacerCaj == 2:
+                            while 1: 
+                                pedido = []
+                                quemenu = input("¿Como desea hacer el pedido? 1. Ver menú, 2.Ingresar código, 3. Salir  ")
+                                if quemenu == "1":
+                                    while 1 :
+                                        cualmenu3 = input("1. Menú comidas, 2. Menú cocteles, 3. Editar pedido, 4. Confirmar pedido, 5. Salir  ") 
+                                        bandera9 = True
+                                        if cualmenu3 == "1":
+                                            productos = comprarComida()
+                                            if productos != None:
+                                                productos = str(productos).replace("]", "")
+                                                productos = str(productos).replace("[", "")
+                                                productos = str(productos).replace("'", "")
+                                                pedido.append(productos)
+                                                
+                                        elif cualmenu3 == "2":
+                                            productos = comprarCocteles()
+                                            if productos != None:
+                                                productos = str(productos).replace("]", "")
+                                                productos = str(productos).replace("[", "")
+                                                productos = str(productos).replace("'", "")
+                                                pedido.append(productos)
+                                        elif cualmenu3 == "3":
+                                            print("Editar")
+                                            contador = 0
                                             
-                                    elif cualmenu3 == "2":
-                                        print("creo qsi")
-                                    
-                                    elif cualmenu3 == "3":
-                                        pedido.insert(0,contadorPedidos+1)
-                                        print(pedido)
-                                        print(PedidosVentas)
-                                        print("Pedido #" + str(contadorPedidos+1) + " gruardado")
 
-                                                    
-                                     #       elif bandera7 == False:
-                                      #          break
-                                ###########################now#########################
+                                        elif cualmenu3 == "4":
+                                            cambio = contodo ()
+                                            pedido.append(cambio)
+                                            pedido.insert(0,contadorPedidos+1)
+                                            print(pedido)
+                                            PedidosPendientes.append(pedido)
+                                            print(PedidosPendientes)
+                                            print("Pedido #" + str(contadorPedidos+1) + " guardado")
+                                            break
+                                        elif cualmenu3 == "5":
+                                            break
 
+                                elif quemenu == "3":
+                                    bandera9 = True
+                                    break
 
-
-                            elif quemenu == "3":
-                                print("AY")
-                                break            
-                    elif hacerCaj == 4:
-                        print("salir")
-                        bandera8 = False
-                        break 
+                        elif hacerCaj == 4:
+                            print("salir")
+                            bandera8 = False
+                            bandera9 = True
+                            bandera6 = False
+                            break
+                        else:
+                            bandera9 = True
+                except ValueError:
+                    print("Ingrese un número") 
             
         
 
@@ -554,8 +699,6 @@ while 1:
             documento=input('Ingrese su documento:')
             direccion=input('Ingrese su direccion: ')
             telefono=input('Ingrese su telefono: ')
-
-
 
 
 
