@@ -331,7 +331,7 @@ def mostarSubmenuProductoComida(numberproduct):
     contador = 0
     for mostrar in nuevo:
         contador+=1
-        print(contador, '->',mostrar[0])
+        print(contador, '->',mostrar[0],'- ', mostrar[3])
     return contador
 
 def mostarSubmenuProductoCocteles(numberproduct):
@@ -340,7 +340,7 @@ def mostarSubmenuProductoCocteles(numberproduct):
     contador = 0
     for mostrar in nuevo:
         contador+=1
-        print(contador, '->',mostrar[0])
+        print(contador, '->',mostrar[0],'- ' , mostrar[3])
     return contador
 
 def comprarCocteles ():
@@ -739,22 +739,27 @@ while 1:
                             if cajerosOpc=="1": 
                                 print(cajeros)
                             elif cajerosOpc=="2":
-                                eliminoCajero=input('¿Qué cajero desea eliminar?: 1. Ingrese el documento del cajero, 2. Salir: ')
-                                if eliminoCajero=='1':
-                                    mostarInfoCajero()
-                                    doc,banh=verifidocum()
-                                    if banh==True:
-                                        contador=-1
-                                        for caje in cajeros:
-                                            contador+=1
-                                            if str(doc)==caje[3]:
-                                                del cajeros[contador]
-                                                bandera2=True
-                                        if bandera2 == False :
-                                            print("Cajero no encontrado.")
-                                        print(cajeros)
-                                elif eliminoCajero=='2':
-                                    bandera2=True
+                                bindo=True
+                                while bindo==True:
+                                    eliminoCajero=input('¿Qué cajero desea eliminar?: 1. Ingrese el documento del cajero, 2. Salir: ')
+                                    if eliminoCajero=='1':
+                                        bindo=False
+                                        mostarInfoCajero()
+                                        doc,banh=verifidocum()
+                                        if banh==True:
+                                            contador=-1
+                                            for caje in cajeros:
+                                                contador+=1
+                                                if str(doc)==caje[3]:
+                                                    del cajeros[contador]
+                                                    bandera2=True
+                                            if bandera2 == False :
+                                                print("Cajero no encontrado.")
+                                            print(cajeros)
+                                            bindo=False
+                                    elif eliminoCajero=='2':
+                                        bindo=False
+                                        bandera2=True
                             elif cajerosOpc=='3':
                                 contador2+=1                    
                                 nombre=input('Ingrese su nombre o 1. Salir:  ')
@@ -765,55 +770,59 @@ while 1:
                                         print(autousercajero(nombre,documento))
                                         print(cajeros)
                             elif cajerosOpc=="4":
-                                user_modificar=input("¿Qué cajero desea modificar?: 1. Ingrese el documento del cajero, 2. Salir:")
-                                if user_modificar=='1':
-                                    banderamal=False
-                                    mostarInfoCajero()
-                                    doce,bancre=verifidocum()
-                                    if bancre==True:
-                                        contadormodi=-1
-                                        for caji in cajeros:
-                                            contadormodi+=1
-                                            if str(doce)==caji[3]:       
-                                                while 1:
-                                                    usuariomod=input('¿Va a modificar usuario? si/no :   ')
-                                                    cambios=[]
-                                                    usuariomod=usuariomod.strip()
-                                                    if usuariomod =="si":
-                                                        usuariocam=input('Ingrese nuevo usuario: ')
-                                                        cambios.append(usuariocam)
-                                                        break
-                                                    elif usuariomod =="no":
-                                                        cambios.append(caji[0])
-                                                        break
-                                                while 1:
-                                                    contraseñamod=input('¿Va a modificar contraseña? si/no :   ')
-                                                    contraseñamod=contraseñamod.strip()
-                                                    if contraseñamod =="si":
-                                                        contraseñacam=input('Ingrese nueva contraseña: ')
-                                                        cambios.append(contraseñacam)
-                                                        break                                            
-                                                    elif contraseñamod =="no":
-                                                        cambios.append(caji[1])
-                                                        break
-                                                while 1:
-                                                    nombremod=input('¿Va a modificar nombre? : si/no: ')
-                                                    nombremod=nombremod.strip()
-                                                    if nombremod =="si":
-                                                        nombrecam=input('Ingrese nuevo nombre: ')
-                                                        cambios.append(nombrecam)
-                                                        cambios.append(caji[3])
-                                                        break
-                                                    elif nombremod =="no":
-                                                        cambios.append(caji[2])
-                                                        cambios.append(caji[3])
-                                                        break
-                                                banderamal=True
-                                                cajeros[contadormodi]=cambios
-                                        if banderamal == False :
-                                            print("Cajero no encontrado.")
-                                elif user_modificar=='2':
-                                    bandera2=True
+                                banderarrr=True
+                                while banderarrr==True:
+                                    user_modificar=input("¿Qué cajero desea modificar?: 1. Ingrese el documento del cajero, 2. Salir:")
+                                    if user_modificar=='1':
+                                        banderarrr=False
+                                        banderamal=False
+                                        mostarInfoCajero()
+                                        doce,bancre=verifidocum()
+                                        if bancre==True:
+                                            contadormodi=-1
+                                            for caji in cajeros:
+                                                contadormodi+=1
+                                                if str(doce)==caji[3]:       
+                                                    while 1:
+                                                        usuariomod=input('¿Va a modificar usuario? si/no :   ')
+                                                        cambios=[]
+                                                        usuariomod=usuariomod.strip()
+                                                        if usuariomod =="si":
+                                                            usuariocam=input('Ingrese nuevo usuario: ')
+                                                            cambios.append(usuariocam)
+                                                            break
+                                                        elif usuariomod =="no":
+                                                            cambios.append(caji[0])
+                                                            break
+                                                    while 1:
+                                                        contraseñamod=input('¿Va a modificar contraseña? si/no :   ')
+                                                        contraseñamod=contraseñamod.strip()
+                                                        if contraseñamod =="si":
+                                                            contraseñacam=input('Ingrese nueva contraseña: ')
+                                                            cambios.append(contraseñacam)
+                                                            break                                            
+                                                        elif contraseñamod =="no":
+                                                            cambios.append(caji[1])
+                                                            break
+                                                    while 1:
+                                                        nombremod=input('¿Va a modificar nombre? : si/no: ')
+                                                        nombremod=nombremod.strip()
+                                                        if nombremod =="si":
+                                                            nombrecam=input('Ingrese nuevo nombre: ')
+                                                            cambios.append(nombrecam)
+                                                            cambios.append(caji[3])
+                                                            break
+                                                        elif nombremod =="no":
+                                                            cambios.append(caji[2])
+                                                            cambios.append(caji[3])
+                                                            break
+                                                    banderamal=True
+                                                    cajeros[contadormodi]=cambios
+                                            if banderamal == False :
+                                                print("Cajero no encontrado.")
+                                    elif user_modificar=='2':
+                                        banderarrr=False
+                                        bandera2=True
                             elif cajerosOpc=="5":
                                 bandera3 =True
                                 break
@@ -860,10 +869,15 @@ while 1:
                                         while 1 :
                                             tipocatego=input('Ingrese un número: 1. Menú Comidas, 2. Menú Cocteles, 3. Salir: ')
                                             if tipocatego=='1':
-                                                nombrecatego=input('ingrese nombre de la nueva categoria o 1. Salir   ')
-                                                if nombrecatego != "1":
-                                                    categorianueva=[nombrecatego,[]]
-                                                    menu_comidas.append(categorianueva)
+                                                bomi=True
+                                                while bomi==True:
+                                                    nombrecatego=input('ingrese nombre de la nueva categoria o 1. Salir   ')
+                                                    if nombrecatego != "1":
+                                                        for coma in menu_comidas:
+                                                            if nombrecatego!= coma[0]:
+                                                                bomi=False
+                                                                categorianueva=[nombrecatego,[]]
+                                                                menu_comidas.append(categorianueva)
                                                     while 1 :
                                                         productopregun=input('desea ingresar productos "si" o "no"  ' )
                                                         if productopregun=="si":
@@ -874,7 +888,7 @@ while 1:
                                                         elif productopregun=="no":
                                                             print('Categoría agregada')
                                                             break
-                                                elif nombrecatego == "1":
+                                                if nombrecatego == "1":
                                                     print("Categoría no agregada ")
                                                     break
                                             elif tipocatego =='2':
