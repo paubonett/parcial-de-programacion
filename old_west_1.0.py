@@ -1,31 +1,21 @@
+from datetime import date
+today = date.today()
+today = str(today).replace("-","/")
+
+####################################------------Listas/Personas------------####################################
 admin=['adminsap','admin123']
 cajeros=[['cajeand','sharon123', 'Sharon Andreina', '1092387960'],['cajeang','angel123', 'Angel Daniel', '1093293435'], ['cajealj', 'paula123', 'Paula', '1090371768']]
 
-##########################################################################################
+usuarios=[['user1', 'pass1', 'Alicia', '12345678', '0000000000', 'País de las maravillas', '0'], ['user2', 'pass2', 'Naruto', '87654321', '1111111111', 'Aldea Oculta de la Hoja','0']]
 
 
-def buscar_user_pass(matriz, usuario, contraseña):
-    for uWu in matriz:
-        if uWu[0] == usuario and uWu[1] == contraseña:
-            return True
-    return False
+####################################------------Base de Datos (Menú)------------####################################
 
-usuarios=[['user1', 'pass1', 'Alicia', '12345678', '0000000000', 'País de las maravillas'], ['user2', 'pass2', 'Naruto', '87654321' '1111111111', 'Aldea Oculta de la Hoja']]
+contadorMenuComidas = 1153
+contadorMenuCocteles = 2190
 
-##########################################################################################
 
-def imprimir_menu_comidas(menu_comidas):
-    for submenu in menu_comidas:
-        for texto in submenu:
-            print(texto)
-        print()
-
-##########################################################################################
-def imprimir_menu_cocteles(menu_cocteles):
-    for submenu in menu_cocteles:
-        for texto in submenu:
-            print(texto)
-        print()
+#---------------------------------------Menú Comidas
 
 
 
@@ -42,7 +32,7 @@ Para_Compartir=[['PICADA OLD WEST', ['-450 gr de pechuga al grill -330 gr de lom
 Ensaladas=[['ENSALADA LUSIANA', ['-350 gr pollo crispy o al grill -50 gr tocineta ahumada -Mix de lechugas tomate Cherry -Queso parmesano -Crotones de pan -Aderezo de la casa -Reducción de vinagre balsámico'], ['Precio $34000'],  "1148"], ['ENSALADA DE CAMARONES', ['-300 gr de camarones al crispy -Mix de lechugas -Tomates Cherry -Crotones de pan -Queso parmesano -Aderezo de la casa -Reducción de vinagre balsámico'], ['Precio $36000'],  "1149"]]
 Menu_Infantil_Postres=[['VAQUERITOS BURGUER', ['-Pan brioche -150 gr de carne molida de res -Tocineta -Queso cheddar americano -Papas a la francesa -Juguete infantil'], ['Precio $32000'],  "1150" ], ['CHEROKEE CHICKEN', ['-250 gr de pollo apanado -Guarnición de papas a la francesa -Juguete infantil'], ['Precio $32000'],  "1151" ], ['TORTA DE CHOCOLATE',[""], ['Precio $12000'],  "1152"], ['LINGOTE DE ORO', ['-Barra de chocolate -Azúcar dorada -Licor dulce -Ganache de frutos secos -Helado artesanal'], ['Precio $19000'],  "1153"]]
 
-
+#---------------------------------------Menú Cocteles
 Cocteles_de_Autor=[['TORO SENTADO', ['-Whisky Red label -Licor de café -Vino embajador -Cerveza club negral -Piña -Naranja'], ['Precio $28000'],  "2101" ], ['BILLY THE KID', ['-Jack Daniels Honey  -Jaguermeister -Crema de coco'], ['Precio $32000'],  "2102" ], ['CALIBRE 38', ['-Whisky Jack Daniel No 7 -Limon -Syrop de frutos rojos -Syrop simple -Ginger'], ['Precio $32000'],  "2103"], ['BONNIE & CLYDE', ['-Ron de coco -Jägermeister -Syrop frutos amarillos -Shrup de piña -Jarabe de genjibre -Limón'], ['Precio $32000'],  "2104"], ['JHON WESLY', ['-Tequila Reposado -Ron coco -Syrop de maracuya -Shrup de piña -Ginger'], ['Precio $30000'],  "2105"], ['JESSE JAMES', ['-Ron blanco -Curacao azul -Syrop de piña -Syrop de maracuya -Ginger'], ['Precio $30000'],  "2106"], ['SE BUSCA', ['-Vodka -Limón -Syrop de lychhe -Vino Rosado lambrusco -Syrop de frutos rojos'], ['Precio $32000'],  "2107"], ['INMORTAL JACK', ['-Jack Daniel No 7 Botellita -Licor de melon -Jarabe de jengibre -Zumo de  limon -Licor de durazno -Jägermeister'], ['Precio $34000'],  "2108"], ['GIN CAKTUS', ['-Ginebra -Infusión de pepino -Tonica nacional'], ['Precio $30000'],  "2109"]]
 Bebidas_Especiales=[['SODAS', ['-Frutos amarillos -Frutos rojos'], ['Precio $10000'], "2110" ], ['SODAS 2', ['-Frutos Azules'], ['Precio $12000'], "2111"], ['LIMONADAS', ['-Limonada Cerezada -Coco Limonada -Limonada Hierba Buena'], ['Precio $11000'], "2112"], ['LIMONADA DE ROSAS', ["-Limonada de rosas"], ['Precio $24000'], "2113"], ['FRAPPES', ['-Naranja -Maracuyá -Limón'], ['Precio $9000'], "2114"]]
 Bebidas=[['AGUA', [""], ['Precio $5000'], "2115"], ['COCA-COLA PET 400ML',[""],  ['Precio $6000'], "2116"], ['COCA-COLA ZERO PET 400ML', [""], ['Precio $6000'], "2117" ], ['GASEOSAS QUATRO - KOLA ROMAN', [""], ['Precio $5000'], "2118"], ['GINGER - SODA',[""], ['Precio $6000'], "2119"], ['REDBULL', [""], ['Precio $10000'], "2120" ]]
@@ -59,25 +49,251 @@ Ron=[['RON VIEJO DE CALDAS 375 ML', [""] , ['Precio $60000'], "2185"], ['RON VIE
 Aguardiente=[['AGUARDIENTE ANTIOQUEÑO 375 ML', [""], ['Precio $60000'], "2189"], ['AGUARDIENTE ANTIOQUEÑO TAPA AZUL', [""], ['Precio $110000'], "2190"]]
 
 
+#---------------------------------------Listas Menús
 
 menu_comidas = [['Carnes Angus Beef', Carnes_Angus_Beef], ['Entradas', Entradas], ['Carnes Uruguayas y Argentinas', Carnes_Uruguayas_Argentinas], ['Carnes Nacionales', Carnes_Nacionales], ['Cerdo', Cerdo], ['Burgers', Hamburguesas], ['Brochetas', Brochetas], ['Pollos', Pollos], ['Pastas', Pastas], ['Para Compartir', Para_Compartir], ['Ensaladas', Ensaladas], ['Menu Infantil Postres', Menu_Infantil_Postres]]
 menu_cocteles=[['Cocteles de Autor', Cocteles_de_Autor], ['Bebidas Especiales', Bebidas_Especiales], ['Bebidas', Bebidas], ['Cervezas Importadas', Cervezas_Importadas], ['Cervezas', Cervezas], ['Sangrias', Sangrias], ['Whisky', Whisky], ['Champagne', Champagne], ['Vino', Vino], ['Ginebra', Ginebra], ['Vodka', Vodka], ['Tequila', Tequila], ['Ron', Ron], ['Aguardiente', Aguardiente]]
 
 ##########################################################################################
 
+####################################------------------------####################################
 contador2=3
 contadorAzul=2
 
+
+PedidosCocinando = []
+
+contadordePedidos = 0
+contadordeFacturas = 0
+
+
 PedidosPendientes = []
-contadorPedidos = len(PedidosPendientes)
+PedidosPendientes_User = []
 
-##########################################################################################
+FacturasGlobales = []
+respaldoAzul=[]
 
-PedidosPendientes = []
-contadorPedidos = len(PedidosPendientes)
+#carrito_user=[]
+pedido_azul = []
+####################################------------------------####################################
+
+import math
+
+#---------------------------------------Factura
+def preciopun (precio):
+    if len(str(precio)) >= 4:
+        precio = '{:,}'.format(int(precio)).replace(',', '.')
+        return precio
+    elif len(str(precio)) > 0 and len(str(precio)) < 1000 :
+        return precio
+    
+
+def lineas():
+    for i in range(30):
+        print(" ", end = "")
+    for i in range(110):
+        print("-", end = "")
+    print("")
+    
+def espaciolinea ():
+    for i in range(31):
+        print(" ", end = "")
+    print(" " , end = "")
+
+def contadores (contadores):
+    for i in range(contadores):
+        print(" ", end="") 
+
+def Facturas (listas):
+    lista = listas
+    listacantidad  = []
+    print(lista)
+    print("\x1b[1;37m" )
+    lineas()    
+    espaciolinea () 
+    espaciolinea () 
+    print(" RESTAURANTE OLD WEST STEAK HOUSE" )
+    espaciolinea ()
+    print("\x1b[1;37m" +" NIT. 901.586.754-8")
+    espaciolinea ()
+    print(" Av. 1 Este #16-20, Los Caobos, Cúcuta, Norte de Santande")
+    espaciolinea()
+    print(" Pedidos y reservas 3117785015     Correo: oldweststekhouse@hotmail.com")
+    espaciolinea()
+    print(" Responsable de IVA")
+    lineas ()
+    lineas ()
+    espaciolinea ()
+    print(" Fecha      ", lista[4] , end = " ")
+    for i in range(20):
+        print(" ", end = " ")
+    print(" FACTURA ELECTRÓNICA DE VENTA N°", str(lista[0]))
+    espaciolinea ()
+    print(" Cliente:   ", lista[5])
+    espaciolinea ()
+    print(" NIT:       ", lista[6])
+    espaciolinea ()
+    print(" Dirección: ", lista[7])
+    espaciolinea ()
+    print(" Orden del pedido: ", lista[1] , end=" ")
+    contadorn4 = 44
+    contadorn4 = 44 - len(str(lista[1])) 
+    contadores(contadorn4)
+    print(lista[2])
+    espaciolinea()
+    modo= str(lista[3]) 
+    if modo.lower() == "online":
+        print(" Método de pago: Online ( X )  Efectivo (" +    " "   + ")  Tarjeta (" +    " "   + ")" )
+    elif modo.lower() == "efectivo":
+        print(" Método de pago: Online (" +    " "    + ")  Efectivo ( X )  Tarjeta (" +    " "   + ")" )
+    elif modo.lower() == "tarjeta":
+        print(" Método de pago: Online (" +    " "    + ")  Efectivo (" +    " "   + ")  Tarjeta ( X )" )
+    elif modo == "cena":
+        print(" Método de pago: Online (" +    " "    + ")  Efectivo (" +    " "   + ")  Tarjeta ( "  + " )" )
+
+    lineas ()
+    espaciolinea ()
+    print(" COD.", end = " ")
+    for i in range(8):
+        print(" ", end = " ")
+    print("DESCRIPCIÓN", end=" ")
+    for i in range(12):
+        print(" ", end = " ")
+    print("CANT.", end = " ")
+    for i in range(5):
+        print(" ", end = " ")
+    print("VR. UNIT", end = " ")
+    for i in range(4):
+        print(" ", end = " ")
+    print("VR. TOTAL" )
+    lineas ()
+
+    ###########################PRODUCTOS###################
+    del lista[-1]
+
+    newvalores = lista[9:]
+    #print(newvalores)
+    contador = -1
+    #print(type(newvalores))
+    for i in range(len(newvalores)):
+        contador += 1
+        producto = str(newvalores[contador])
+        
+    #    print(producto+ " 123")
+        producto = producto.split("-")
+        
+    #    print(producto)
+        banderaprecio = False
+        if "combo" in producto[1]:
+            produ = producto[1].replace(" combo", "")
+            banderaprecio =  True
+        elif "_" in producto[1]:
+            produ = producto[1].split(" _")
+            del produ[1]
+            produ = produ[0]
+        else:
+            produ = producto[1]
+
+        cantidad = producto[0]
+    #    print(produ)
 
 
 
+        for submenu in menu_comidas:    
+            for si in submenu[1]:
+                if si[0] == produ :
+                    codigo = si[3]
+                    precio = si[2]
+                    name = si[0]
+
+        for submenu in menu_cocteles:    
+            for si in submenu[1]:
+                if si[0] == produ :
+                    codigo = si[3]
+                    precio = si[2]
+                    name = si[0]
+        
+        if type(precio) == list:
+            precio = precio[0]
+            precio = precio.split("$")
+            precio= precio[1]
+            if banderaprecio == True:
+                precio = int(precio[1]) + 3000 
+        #print(precio)
+        #print(type(precio))
+
+
+
+        espaciolinea()
+        print(" ", codigo ,"    ", produ , end=" ")
+
+        contadorn1 = 45
+        contadorn1 = contadorn1 - len(produ)
+        contadores (contadorn1)
+        print(cantidad, end = "")
+        contadorn2 = 14
+        contadorn2 = 16 - len(cantidad)
+        contadores(contadorn2)
+        prepun = preciopun (precio)
+        print(prepun, end = "")
+        
+        contadorn3 = 18 - len(prepun)
+        contadores (contadorn3)
+        total = int(cantidad) * int(precio)
+        topun = preciopun (total)
+        print(str(topun))
+        listacantidad.append(total)
+    lineas ()
+    espaciolinea()
+    for i in range(37):
+        print(" ", end=" ")
+    contadorn5 = 14
+    subtotal = str(sum(listacantidad))
+    subtopun = preciopun (subtotal)
+    contadorn5 = contadorn5 - len(subtopun)
+    print("Sub Total $" , end="")
+    contadores(contadorn5)
+    print(subtopun)
+    
+    espaciolinea()
+    for i in range(37):
+        print(" ", end=" ")
+    iva = str(int(0.19 * int(subtotal)))
+    contadorn6 = 22
+    ivpun = preciopun (iva)
+    contadorn6 = contadorn6 - len(ivpun)
+    print("IVA" , end= "")
+    contadores (contadorn6)
+    print(ivpun)
+    espaciolinea ()
+    for i in range(37):
+        print(" ", end=" ")
+    total = str(int(subtotal) + int(iva))
+#    totpun = preciopun(total)
+
+    print("TOTAL $", end=" ")
+    if lista[8] == "nega":
+        total = str(-1 * int(total))
+        totpun = preciopun(total)
+        contadorn7 = 17 - len(totpun)
+        contadores (contadorn7)
+        print(totpun)
+    elif lista[8] == "posi":
+        totpun = preciopun(total)
+        contadorn7 = 17 - len(totpun)
+        contadores (contadorn7)
+        print(totpun)
+
+    lineas ()
+    espaciolinea ()
+    for i in range(22):
+        print(" ", end=" ")
+    print("\x1b[3;37m"+ "Gracias por preferirnos")
+    lineas ()
+    print("\33[0;m" , end= "")
+    return ""
+
+#---------------------------------------
 def autousercajero(nombre, documento):
     usu= "cajero" + str(contador2)
     cont = "Ab" + str(documento)
@@ -85,17 +301,60 @@ def autousercajero(nombre, documento):
     cajeros.append(list_1)
     return usu, cont
 
-
-def autouser_user(nombre, documento, telefono, direccion):
+#---------------------------------------
+def autouser_user(nombre, documento, telefono, direccion, stray):
     usu= "user" + str(contadorAzul)
     cont = "pass" + str(contadorAzul)
-    list_1=[usu, cont, nombre, documento, telefono, direccion]
+    list_1=[usu, cont, nombre, documento, telefono, direccion, stray]
     usuarios.append(list_1)
     print('Su usuario es: ', '(', usu, ')', 'y su contraseña es: ', '(', cont, ')')
 
+#---------------------------------------
+def productoExiste (nombre,productos):
+    bandera13 = True
+    if productos != []:
+        name = nombre.split("-")
+        contador3 = -1
+        for elemento in productos:
+            contador3 += 1
+            if elemento != None:
+                elemento = elemento.split("-")
+                if elemento[1] == name[1]:
+                    newcant = int(elemento[0])+ int(name[0])
+                    name = str(newcant) + "-" + name[1]
+                    numpro = contador3
+                    bandera13 = False
+                    return name, numpro
+        if bandera13 == True:
+            numpro = -5
+            return nombre,numpro    
+    elif productos == []:
+        numpro = -5
+        return nombre,numpro
 
-def comprarComida ():
-    productos = []
+#---------------------------------------
+def cantidad (nombre):
+    while 1:
+        try:
+            cantidad = int(input("¿Cúantos servicios desea?: "))
+            if cantidad > 0:
+                nombre = str(cantidad) + "-" + str(nombre)
+                return nombre
+                break
+            elif cantidad == 0:
+                print("La cantidad no puede ser 0")
+            elif cantidad <0:
+                print("Tiene que ser un número positivo")
+        except ValueError:
+            print("Ingrese un número")
+
+#---------------------------------------
+def comprarComida (pedido):
+    if pedido == []:
+        productos = []
+    elif pedido != []:
+        productos = pedido
+
     while 1 :
         mostrarMenuComida()
         bandera7 , numberproduct = verificatecomidas()
@@ -122,6 +381,10 @@ def comprarComida ():
                                             break
                                         elif papas.lower() == "no":
                                             break
+                                nombre = cantidad(nombre)
+                                nombre,numpro = productoExiste(nombre,productos) 
+                                if numpro != -5:
+                                    del productos[numpro]
                                 productos.append(nombre)
                                 bandera9 = False
                                 break
@@ -142,10 +405,46 @@ def comprarComida ():
     elif productos != []: 
         return productos
 
+#---------------------------------------
+def editarPedido (pedido):
+    if pedido != []:
+        bandera10 = False
+        contador = 0
+        print(" ")
+        for elemen in pedido:
+            contador += 1 
+            print( str(contador)+ ".  " + elemen, end ="  ")
+        print(" ")
+        while 1:
+            try :
+                cualpro = int(input("Escriba el número del producto que desea eliminar o " + str(contador+5) + " Salir  " ))
+                if cualpro > 0 and cualpro <= contador:
+                    bandera10 = True
+                    break
+                elif cualpro  == contador + 5:
+                    break
+            except ValueError:
+                print("Escriba un número")
+        if bandera10 == True:
+            del pedido [cualpro-1]
+            print ("Se elimino el producto del pedido")
+        elif bandera10 == False:
+            print( "No hay cambios en el pedido")
+        return pedido
+    elif pedido == []:
+        print("Aun no ha guardado productos")
+        pedido = []
+        return pedido 
+
+#---------------------------------------
 def verifidocum():    
     while 1:
         try:
             documento = int(input ("Ingrese documento o ingrese (7) para salir: "))
+            for persona in usuarios:
+                if persona[3] == str(documento):
+                    print("Documento ya registrado, inválido.")
+                    return
             if documento == 7:
                 bandera=False
                 break
@@ -157,6 +456,9 @@ def verifidocum():
         except ValueError:
             print("Error, Ingrese números")
     return documento,bandera
+
+
+#---------------------------------------
 
 def verifinombre(nombre):
     contadorveri = 0
@@ -170,7 +472,10 @@ def verifinombre(nombre):
             return nombre
             break
         contadorveri += 1
-        
+
+
+#---------------------------------------
+
 def verifitelefono():
     while 1:
         try:
@@ -186,14 +491,19 @@ def verifitelefono():
     return telefono
 
 
+#---------------------------------------
+
 def contodo ():
     while 1:
         all = input("¿Con todo? (si) - (no) ")
         if all.lower() == "si":
             break
         elif all.lower() == "no":
-            cambio = input("Desea añadirle o quitarle algo a la comida?  ")
+            cambio = input("Desea añadirle o quitarle algo a la comida?:  ")
             return cambio
+
+
+#---------------------------------------
 
 def verificarString(nombre):
     conu=nombre.replace(" ","")
@@ -201,6 +511,9 @@ def verificarString(nombre):
         return True
     else:
         print("no ingrese numeros y/o caracteres especiales")
+
+
+#---------------------------------------
 
 def verifiprice():
     while True:
@@ -217,6 +530,7 @@ def verifiprice():
             print('Ingrese precio valido.')
     return precio
 
+#---------------------------------------
 def mostrarMenuCocteles():
     contadorcuen=0
     print('MENÚ DE COCTELES :P')
@@ -224,6 +538,7 @@ def mostrarMenuCocteles():
         contadorcuen+=1
         print(contadorcuen, '->', coctel[0])
 
+#---------------------------------------
 def mostrarMenuComida():
     print("MENÚ DE COMIDAS :P")
     contadorcuen=0
@@ -231,6 +546,37 @@ def mostrarMenuComida():
         contadorcuen+=1
         print (contadorcuen, '->', comida[0])
 
+#---------------------------------------
+def mostrarPedidosVigentes():
+    contadorazul_vigentes=0
+    print('Sus pedidos vigentes son: ')
+    for vigentes in PedidosPendientes_User:
+        contadorazul_vigentes+=1
+        print('Pedido #', contadorazul_vigentes, '->', vigentes)
+
+#---------------------------------------
+def eliminar_pedidoVigente(PedidosPendientes_User, respaldoAzul):
+    print("Sus pedidos vigentes son: ")
+    for xD, another in enumerate(PedidosPendientes_User):
+        print(f'{xD + 1}. {another}')
+
+    while True:
+        try:
+            genjutsu = int(input("Ingrese el número del pedido que desea eliminar: ")) - 1
+            
+            if genjutsu < 0 or genjutsu >= len(PedidosPendientes_User):
+                raise ValueError
+            break
+        except ValueError:
+            print("¡Debe ingresar un número válido correspondiente a la lista que desea eliminar!")
+
+    pedido_eliminado=PedidosPendientes_User.pop(genjutsu)
+    respaldoAzul.append(pedido_eliminado)
+
+    print(f'El pedido ha sido cancelado.')
+    return PedidosPendientes_User
+
+#---------------------------------------
 def verificatecocteles (): 
     while 1:
         try :
@@ -246,6 +592,7 @@ def verificatecocteles ():
         except ValueError:
             print("Ingrese el número de la categoria")
 
+#---------------------------------------
 def verificatecomidas (): 
     while 1:
         try :
@@ -260,6 +607,9 @@ def verificatecomidas ():
                 break  
         except ValueError:
             print("Ingrese el número de la categoria")
+
+
+#---------------------------------------
 
 def verificateProductoCocteles(numberproduct):
     while 1:
@@ -277,6 +627,9 @@ def verificateProductoCocteles(numberproduct):
                 break
         except ValueError:
             print("Ingrese el número del producto")
+
+
+#---------------------------------------
 
 def verificateProductoComidas(numberproduct):
     while 1:
@@ -296,7 +649,7 @@ def verificateProductoComidas(numberproduct):
             print("Ingrese el número del producto")
 
 
-
+#---------------------------------------
 def nuevoProductoCocteles(numberproduct):
     nuevo=menu_cocteles[int(numberproduct)-1]
     nombre_producto = input('Ingrese el nombre del nuevo producto o 1. Salir: ')
@@ -311,6 +664,7 @@ def nuevoProductoCocteles(numberproduct):
     else:
         print("No se guardo el producto")
 
+#---------------------------------------
 def nuevoProductoComida(numberproduct):
     nuevo=menu_comidas[int(numberproduct)-1]
     nombre_producto=input('Ingrese el nombre del nuevo producto o 1. Salir: ')
@@ -325,6 +679,9 @@ def nuevoProductoComida(numberproduct):
     else:
         print("No se guardo el producto")
 
+
+#---------------------------------------
+
 def mostarSubmenuProductoComida(numberproduct):
     categoria=menu_comidas[int(numberproduct)-1]
     nuevo=categoria[1]
@@ -334,6 +691,7 @@ def mostarSubmenuProductoComida(numberproduct):
         print(contador, '->',mostrar[0],'- ', mostrar[3])
     return contador
 
+#---------------------------------------
 def mostarSubmenuProductoCocteles(numberproduct):
     categoria=menu_cocteles[int(numberproduct)-1]
     nuevo=categoria[1]
@@ -343,8 +701,12 @@ def mostarSubmenuProductoCocteles(numberproduct):
         print(contador, '->',mostrar[0],'- ' , mostrar[3])
     return contador
 
-def comprarCocteles ():
-    productos = []
+#---------------------------------------
+def comprarCocteles (pedido):
+    if pedido == []:
+        productos = []
+    elif pedido != []:
+        productos = pedido
     while 1 :
         mostrarMenuCocteles()
         bandera7 , numberproduct = verificatecocteles()
@@ -363,7 +725,11 @@ def comprarCocteles ():
                         while 1 :
                             aña = input("(si) Añadir producto, (no) Salir  ")
                             if aña.lower() == "si":
-                                nombre = opcio (number, nombre)                                    
+                                nombre = opcio (number, nombre)
+                                nombre = cantidad(nombre)
+                                nombre,numpro = productoExiste(nombre,productos)
+                                if numpro != -5:
+                                    del productos[numpro]                                    
                                 productos.append(nombre)
                                 bandera9 = False
                                 break
@@ -384,119 +750,8 @@ def comprarCocteles ():
     elif productos != []: 
         return productos
 
-def comprarCocteles ():
-    productos = []
-    while 1 :
-        mostrarMenuCocteles()
-        bandera7 , numberproduct = verificatecocteles()
-        if bandera7 == True:
-            contador = mostarSubmenuProductoCocteles(numberproduct)
-            bandera9 = True
-            while bandera9==True:
-                try :
-                    producto = int(input("Ingrese un número para ver la descripción del producto o " + str(contador + 5) + ". Ver submenú, " + str(contador + 6) + ". Salir  "))
-                    if producto <= contador and producto > 0 :
-                        nombre = str(menu_cocteles[numberproduct-1][1][producto-1][0])
-                        print(nombre)      
-                        print( ','.join(menu_cocteles[numberproduct-1][1][producto-1][1]))
-                        print(','.join(menu_cocteles[numberproduct-1][1][producto-1][2]))
-                        number = int(menu_cocteles[numberproduct-1][1][producto-1][3])
-                        while 1 :
-                            aña = input("(si) Añadir producto, (no) Salir  ")
-                            if aña.lower() == "si":
-                                nombre = opcio (number, nombre)                                    
-                                productos.append(nombre)
-                                bandera9 = False
-                                break
-                            elif aña.lower() == "no":
-                                bandera9 = False
-                                break
-                    elif contador+5 == producto:
-                        bandera9 = False
-                    elif contador+6 == producto:
-                        bandera7 = False
-                        bandera9 = False
-                except ValueError:
-                    print("Ingrese un número  ")  
-        if bandera7 == False:
-            break
-    if productos == []:
-        print("No se guardo ninguna bebida en el pedido ")
-    elif productos != []: 
-        return productos
-    
-def opcio (number, nombre):    
-    while 1:
-        if number == 2112 :
-            try:
-                sabor = int(input("¿Qué sabor desea?: 1. Limonada Cerezada, 2. Coco Limonada, 3. Limonada Hierba Buena    "))
-                if int(sabor) == 1:
-                    nombre = nombre + " -limonada cerezada"
-                    break
-                elif int(sabor) == 2:
-                    nombre = nombre + " -coco limonada"
-                    break
-                elif int(sabor) == 3:
-                    nombre = nombre + " -hierva buena"
-                    break
-            except ValueError:
-                print("Ingrese un número")
-        elif number == 2114:
-            try :
-                sabor = int(input("¿Qué sabor desea?: 1. Naranja, 2. Maracuyá, 3. Limón"))
-                if sabor == 1:
-                    nombre = nombre + " -naranja"
-                    break
-                elif sabor == 2:
-                    nombre = nombre + " -maracuyá" 
-                    break
-                elif sabor == 3:
-                    nombre = nombre + " -limón"
-                    break
-            except ValueError:
-                print("Ingrese un número")
-        elif number == 2118:
-            try:
-                sabor = int(input("¿Qué sabor desea?: 1. GASEOSAS QUATRO, 2. KOLA ROMAN "))
-                if sabor == 1:
-                    nombre = nombre + " -gaseosas quatro"
-                    break
-                elif sabor == 2:
-                    nombre = nombre + " -kola roman"
-                    break
-            except ValueError:
-                print("Ingrese un número")
-        elif number == 2119:
-            try:
-                sabor = int(input("¿Qué sabor desea?: 1. GINGER, 2. SODA "))
-                if sabor == 1:
-                    nombre = nombre + " -ginger" 
-                    break
-                if sabor == 2:
-                    nombre = nombre + " -soda"
-                    break
-            except ValueError:
-                print("Ingrese un número")
-        elif number == 2135:
-            try:
-                sabor = int(input("¿Qué sabor desea?: 1. Roja, 2. Negra, 3. Dorada, 4. Doble Malta"))
-                if sabor == 1:
-                    nombre = nombre + " -roja"
-                    break
-                elif sabor == 2:
-                    nombre = nombre + " -negra"
-                    break
-                elif sabor == 3:
-                    nombre = nombre + " -dorada"
-                    break
-                elif sabor == 4:
-                    nombre = nombre + " -doble malta"
-                    break
-            except ValueError:
-                print("Ingrese un número")
-    return nombre
 
-####################################################################################################
+#---------------------------------------
 
 def eliminarModificarProducto(cualpro):        
     if cualpro == '1':
@@ -519,7 +774,7 @@ def eliminarModificarProducto(cualpro):
         elif bandera7==False:
             bane=False
             return bane,0,0,0,0
-            
+
     elif cualpro == '2':
         mostrarMenuCocteles()
         bandera7 , numberproduct = verificatecocteles()
@@ -533,6 +788,7 @@ def eliminarModificarProducto(cualpro):
                 nup=elimino[1]
                 return nup,elimino,caten,
             elif bandera8==False:
+
                 bane=False
                 return bane,0,0,0,0
         elif bandera7==False:
@@ -542,6 +798,7 @@ def eliminarModificarProducto(cualpro):
 def mostarInfoCajero():
     for caje in cajeros:
         print(caje[0],"=>",caje[3])
+
 
 def modificarProductoCoctelComida(cualpron):
     if cualpron=='1':
@@ -560,16 +817,19 @@ def modificarProductoCoctelComida(cualpron):
                 elif nameproduct=='no':
                     cambiose.append(producto_a_modificar[0])
                     break
+
             while 1:
                 descripcionproduct=input('¿Desea cambiar descripcion del producto? si/no  :  ')
                 descripcionproduct=descripcionproduct.strip()
                 if descripcionproduct=='si':
                     descripnewpro=input('Ingrese nueva descripcion del producto :   ')
+
                     cambiose.append(descripnewpro)
                     break
                 elif descripcionproduct=='no':
                     descripnewpro=producto_a_modificar[1]
                     cambiose.append(descripnewpro)
+
                     break
             while 1:
                 priceproduct=input('¿Desea cambiar precio del producto? si/no  :  ')
@@ -578,6 +838,7 @@ def modificarProductoCoctelComida(cualpron):
                     precio1=verifiprice()
                     precioe=descripnewpro, 'Precio: $'+str(precio1)
                     precioewpro=list(precioe)
+
                     cambiose.append(precioewpro)
                     break
                 elif descripcionproduct=='no':
@@ -586,13 +847,16 @@ def modificarProductoCoctelComida(cualpron):
                     break
                     break
             cambiose.append(producto_a_modificar[3])
+
             nupi[nume]=cambiose
             elimino[1]=nupi
             menu_comidas[caten]=elimino
             print(menu_comidas[caten])
     elif cualpron=='2':
+
         banin,nupi,elimino,caten,nume=eliminarModificarProducto('2')
         if banin==True:        
+
             producto_a_modificar=nupi[nume]
             cambiose=[]
             while 1:
@@ -606,22 +870,26 @@ def modificarProductoCoctelComida(cualpron):
                 elif nameproduct=='no':
                     cambiose.append(producto_a_modificar[0])
                     break
+
             while 1:
                 descripcionproduct=input('¿Desea cambiar descripcion del producto? si/no  :  ')
                 descripcionproduct=descripcionproduct.strip()
                 if descripcionproduct=='si':
                     descripnewpro=input('Ingrese nueva descripcion del producto :   ')
+
                     cambiose.append(descripnewpro)
                     break
                 elif descripcionproduct=='no':
                     descripnewpro=producto_a_modificar[1]
                     cambiose.append(descripnewpro)
+
                     break
             while 1:
                 priceproduct=input('¿Desea cambiar precio del producto? si/no  :  ')
                 priceproduct=priceproduct.strip()
                 if priceproduct=='si':
                     precio1=verifiprice()
+
                     precioe= 'Precio: $'+str(precio1)
                     precioe=list(precioe)
                     cambiose.append(precioe)
@@ -631,78 +899,97 @@ def modificarProductoCoctelComida(cualpron):
                     cambiose.append(precioe)
                     break
             cambiose.append(producto_a_modificar[3])
+
             nupi[nume]=cambiose
             elimino[1]=nupi
             menu_cocteles[caten]=elimino
             print(menu_cocteles[caten])
 
 
+#---------------------------------------
+def metodopago():
+    while 1:
+        try:
+            metodopago = int(input("¿Cómo desea pagar? 1. Efectivo, 2. Tarjeta "))
+            if metodopago == 1 :
+                formapago = "Efectivo"
+                return formapago
+                break
+            elif metodopago == 2:
+                formapago = "Tarjeta"
+                return formapago 
+                break            
+        except ValueError:
+            print("Ingrese un número")
+
+#---------------------------------------
 def opcio (number, nombre):    
     while 1:
         if number == 2112 :
             try:
                 sabor = int(input("¿Qué sabor desea?: 1. Limonada Cerezada, 2. Coco Limonada, 3. Limonada Hierba Buena    "))
                 if int(sabor) == 1:
-                    nombre = nombre + " -limonada cerezada"
+                    nombre = nombre + " _limonada cerezada"
+                    print(nombre)
                     break
                 elif int(sabor) == 2:
-                    nombre = nombre + " -coco limonada"
+                    nombre = nombre + " _coco limonada"
                     break
                 elif int(sabor) == 3:
-                    nombre = nombre + " -hierva buena"
+                    nombre = nombre + " _hierva buena"
                     break
             except ValueError:
                 print("Ingrese un número")
         elif number == 2114:
             try :
-                sabor = int(input("¿Qué sabor desea?: 1. Naranja, 2. Maracuyá, 3. Limón"))
+                sabor = int(input("¿Qué sabor desea?: 1. Naranja, 2. Maracuyá, 3. Limón  "))
                 if sabor == 1:
-                    nombre = nombre + " -naranja"
+                    nombre = nombre + " _naranja"
                     break
                 elif sabor == 2:
-                    nombre = nombre + " -maracuyá" 
+                    nombre = nombre + " _maracuyá" 
                     break
                 elif sabor == 3:
-                    nombre = nombre + " -limón"
+                    nombre = nombre + " _limón"
                     break
             except ValueError:
                 print("Ingrese un número")
         elif number == 2118:
             try:
-                sabor = int(input("¿Qué sabor desea?: 1. GASEOSAS QUATRO, 2. KOLA ROMAN "))
+                sabor = int(input("¿Qué sabor desea?: 1. GASEOSAS QUATRO, 2. KOLA ROMAN  "))
                 if sabor == 1:
-                    nombre = nombre + " -gaseosas quatro"
+                    nombre = nombre + " _gaseosas quatro"
                     break
                 elif sabor == 2:
-                    nombre = nombre + " -kola roman"
+                    nombre = nombre + " _kola roman"
                     break
             except ValueError:
                 print("Ingrese un número")
         elif number == 2119:
             try:
-                sabor = int(input("¿Qué sabor desea?: 1. GINGER, 2. SODA "))
+                sabor = int(input("¿Qué sabor desea?: 1. GINGER, 2. SODA   "))
                 if sabor == 1:
-                    nombre = nombre + " -ginger" 
+                    nombre = nombre + " _ginger" 
                     break
                 if sabor == 2:
-                    nombre = nombre + " -soda"
+                    nombre = nombre + " _soda"
                     break
             except ValueError:
                 print("Ingrese un número")
         elif number == 2135:
             try:
-                sabor = int(input("¿Qué sabor desea?: 1. Roja, 2. Negra, 3. Dorada, 4. Doble Malta"))
+                sabor = int(input("¿Qué sabor desea?: 1. Roja, 2. Negra, 3. Dorada, 4. Doble Malta   "))
                 if sabor == 1:
-                    nombre = nombre + " -roja"
+                    nombre = nombre + " _roja"
                     break
                 elif sabor == 2:
-                    nombre = nombre + " -negra"
+                    nombre = nombre + " _negra"
                     break
                 elif sabor == 3:
-                    nombre = nombre + " -dorada"
+                    nombre = nombre + " _dorada"
                     break
                 elif sabor == 4:
-                    nombre = nombre + " -doble malta"
+                    nombre = nombre + " _doble malta"        
                     break
             except ValueError:
                 print("Ingrese un número")
@@ -711,12 +998,13 @@ def opcio (number, nombre):
     return nombre
 
 
-
-####################################################################################################
-
+####################################------------Inicio------------####################################
 while 1:
     print("¡¡¡ Bienvenid@s a OLD WEST !!! (づ ｡◕‿‿◕｡) づ  ")
-    queso=input("(Ingrese un número): 1. Administrador, 2. Cajero, 3. Usuario:     "  )
+    queso=input("(Ingrese un número): 1. Administrador, 2. Cajero, 3. Usuario: " )
+
+    #---------------------------------------Administrador
+
     if queso=='1':
         bandera5 = True
         while bandera5 == True :
@@ -739,6 +1027,7 @@ while 1:
                 hacerAdm = input("(Ingrese un número) 1. Cajero, 2. Producto, 3. Ventas, 4. Volver al menú: ")
                 bandera3 =False
                 while bandera3==False:
+
                     if hacerAdm=='1':
                         bandera2=False
                         while bandera2==False:
@@ -777,6 +1066,7 @@ while 1:
                                         print(autousercajero(nombre,documento))
                                         print(cajeros)
                             elif cajerosOpc=="4":
+
                                 banderarrr=True
                                 while banderarrr==True:
                                     user_modificar=input("¿Qué cajero desea modificar?: 1. Ingrese el documento del cajero, 2. Salir:")
@@ -830,6 +1120,7 @@ while 1:
                                     elif user_modificar=='2':
                                         banderarrr=False
                                         bandera2=True
+
                             elif cajerosOpc=="5":
                                 bandera3 =True
                                 break
@@ -837,24 +1128,26 @@ while 1:
                     elif hacerAdm == "2":
                         bandera4 = True
 
+
                         while bandera4 == True:
                             producOpc = input("Ingrese un número: 1. Ver productos, 2. Nuevo producto o Categoría, 3. Eliminar Producto o Categoría, 4. Modificar producto o Categoria, 5. Salir  :   ")
+
                             if producOpc == "1":
                                 while 1:
-                                    cualmenu = input("Ingrese un número: 1. Menú Comidas, 2. Menú Cocteles, 3. Salir: ")
+                                    cualmenu = input("(Ingrese un número) 1. Menú Comidas, 2. Menú Cocteles, 3. Salir: ")
                                     if cualmenu == "1":
                                         mostrarMenuComida()
                                     elif cualmenu =='2':
                                         mostrarMenuCocteles()
                                     elif cualmenu =='3':
                                         break
-                                    
+
                             elif producOpc =='2':
                                 while 1:
                                     add = input('Agregar nuevo:  1. Producto, 2. Categoría, 3. Salir : ')
                                     if add == '1':
                                         while 1 :
-                                            cualmenu2 = input('Ingrese un número: 1. Menú Comidas, 2. Menú Cocteles, 3. Salir: ')
+                                            cualmenu2 = input('(Ingrese un número) 1. Menú Comidas, 2. Menú Cocteles, 3. Salir: ')
                                             if cualmenu2 == '1':
                                                 mostrarMenuComida()
                                                 bandera7 , numberproduct = verificatecomidas()            
@@ -871,9 +1164,9 @@ while 1:
                                                     print("No se guardo el producto ")
                                             elif cualmenu2 == '3':
                                                 break
-
                                     elif add =='2':
                                         while 1 :
+
                                             tipocatego=input('Ingrese un número: 1. Menú Comidas, 2. Menú Cocteles, 3. Salir: ')
                                             if tipocatego=='1':
                                                 bomi=True
@@ -956,18 +1249,20 @@ while 1:
                                                         print("Categoría no agregada ")
                                                         bofi=False
                                             elif tipocatego=='3':
+
                                                 break
                                     elif add == "3":
                                         break
-
                             elif producOpc == "3" :
                                 banderaeliminar=True
                                 while banderaeliminar==True: 
+
                                     produocate=input('¿Que desea eliminar? 1. Producto, 2. Categoría, 3.salir :   ') 
                                     if produocate=='1':
                                         banderaeliminarprod=True
                                         while banderaeliminarprod==True:
                                             cualpro=input('Ingrese un número: 1. Menú Comidas, 2. Menú Cocteles, 3. Salir : ')
+
                                             if cualpro == '1':
                                                 bane,nup,elimino,caten,num=eliminarModificarProducto('1')
                                                 if bane==True:
@@ -980,8 +1275,10 @@ while 1:
                                                 elif bane==False:
                                                     banderaeliminarprod=False
                                             elif cualpro == '2':
+
                                                 banip,nup,elimino,caten,num=eliminarModificarProducto('2')
                                                 if banip==True:
+
                                                     productoeliminado=[]
                                                     productoeliminado.append(nup.pop(num))
                                                     elimino[1]=nup
@@ -993,10 +1290,12 @@ while 1:
                                             elif cualpro=='3':
                                                 banderaeliminarprod=False
 
+
                                     elif produocate=='2':
                                         banderaeliminarcate=True
                                         while banderaeliminarcate==True:
                                             cualcatego=input('Ingrese un número: 1. Menú Comidas, 2. Menú Cocteles, 3. Salir: ')
+
                                             productoeliminado=[]
                                             if cualcatego == '1':
                                                 mostrarMenuComida()
@@ -1013,6 +1312,7 @@ while 1:
                                                     mostrarMenuCocteles()
                                                     banderaeliminarcate=False
                                             elif cualcatego=='3':
+
                                                  banderaeliminar=False
                                     elif produocate=='3':
                                         banderaeliminar=False
@@ -1025,6 +1325,7 @@ while 1:
                                         bandenose=True
                                         while bandenose==True:
                                             cualpro=input('Ingrese un número: 1. Menú Comidas, 2. Menú Cocteles, 3. Salir : ')
+
                                             if cualpro=='1':
                                                 modificarProductoCoctelComida('1')
                                                 bandenose=False
@@ -1034,10 +1335,12 @@ while 1:
                                             elif cualpro=='3':
                                                 bandenose=False
 
+
                                     elif edit=='2':
                                         banderamodificandoando=True
                                         while banderamodificandoando==True:
                                             cualcatego=input('Ingrese un número: 1. Menú Comidas, 2. Menú Cocteles, 3. Salir: ')
+
                                             
                                             if cualcatego == '1':
                                                 mostrarMenuComida()
@@ -1045,6 +1348,7 @@ while 1:
                                                 if bandera7==True:
                                                     categoriaedicion=menu_comidas[int(numberproduct)-1]
                                                     nuevocambiose=categoriaedicion[0]
+
                                                     
                                                     bomi=True
                                                     while bomi==True:
@@ -1083,12 +1387,14 @@ while 1:
                                                             print("Categoría no agregada ")
                                                             bomi=False
 
+
                                             elif cualcatego == '2':
                                                 mostrarMenuCocteles()
                                                 bandera7 , numberproduct = verificatecocteles()
                                                 if bandera7==True:
                                                     categoriaedicion=menu_cocteles[int(numberproduct)-1]
                                                     nuevocambiose=categoriaedicion[0]
+
                                                     bomi=True
                                                     while bomi==True:
                                                         edicionnombre=input('Ingrese nombre de la categoria  o 1.salir:   ')
@@ -1127,6 +1433,7 @@ while 1:
                                                             bomi=False
 
 
+
                                             elif cualcatego=='3':
                                                  banderamodificandoando=False
                                     elif edit=='3':
@@ -1142,8 +1449,7 @@ while 1:
                         bandera5 = False
 
 
-####################################################################################################          
-
+    #---------------------------------------Cajeros
     elif queso=='2':
         bandera6 = True
         while bandera6 == True:
@@ -1152,67 +1458,294 @@ while 1:
             bandera8 = False
             for cajero in cajeros:    
                 if usuarioCaj==cajero[0] and contraseñaCaj==cajero[1]:
-                    print("Bienvenid@ Cajero ;3")
-                    bandera8=True
+                    nombrecajero = cajero[2]
+                    documencajero = cajero[3] 
+                    print("Bienvenid@ Cajero \(@^0^@)/")
+                    bandera8=True          
             if bandera8 == False:
-                print("Usuario o contraseña incorrecta")
+                print("Usuario o contraseña incorrecta\n")
+                break
             while bandera8==True:
 
                 hacerCaj = input("(Ingrese un número) 1. Pedido, 2. Pedido Nuevo, 3. Pendientes, 4. Volver al menú: ")
                 bandera9 =False
                 while bandera9==False:
                     if hacerCaj=='1':
-                        print("Hola")
-                        print(PedidosPendientes)
-                        break
+                        listpedidos = []
+                        print("Bienvenido Chef")
+                        bandera12 = False
+                        for pedido3 in PedidosCocinando:
+                            if pedido3[0] != "":
+                                listpedidos.append(pedido3[0])
+                                print("Pedido #" + str(pedido3[0]))
+                                bandera12 = True
+                        print("")
+                        if bandera12 == True:
+                            while 1 :
+                                try:
+                                    cualPedido = int(input("Escriba el numero del pedido que desea ver o " + str(contadordePedidos + 5) + " Salir" ))
+                                    if cualPedido == contadordePedidos + 5:
+                                        break
+                                    elif cualPedido in listpedidos:
+                                        if PedidosCocinando[cualPedido-1][-1] == None:
+                                            print("Con todo")
+                                        elif PedidosCocinando[cualPedido-1][-1] != None:
+                                            print(PedidosCocinando[cualPedido-1][-1])
+                                        print(PedidosCocinando[cualPedido-1][7:-1])
+                                        while 1:
+                                            terminado = input("¿Pedido terminado? (si) - (no) - (Cancelado) ")
+
+                                            if terminado.lower() == "si":
+                                                contadordeFacturas += 1
+                                                PedidosCocinando[cualPedido-1].insert(0,contadordeFacturas)
+                                                
+                                                if PedidosCocinando[cualPedido-1][3] == "Online" :
+                                                    FacturasGlobales.append(PedidosCocinando[cualPedido-1])
+                                                elif PedidosCocinando[cualPedido-1][3] != "Online":
+                                                    PedidosPendientes.append(PedidosCocinando[cualPedido-1])
+                                                PedidosCocinando[cualPedido-1] = ["",""]
+                                                
+                                                break
+                                            elif terminado.lower() == "no":
+                                                break 
+                                            elif terminado.lower() == "cancelado":
+                                                PedidosCocinando[cualPedido-1] = ["",""]
+                                                break
+                                        break                            
+                                except ValueError:
+                                    print("Ingrese un número ")
+                            print(" ")
+                            break
+                        elif bandera12 == False:
+                            print("No hay pedidos")
+                            break
+
                     elif hacerCaj == "2":
                         while 1: 
                             pedido = []
                             quemenu = input("¿Como desea hacer el pedido? 1. Ver menú, 2.Ingresar código, 3. Salir  ")
                             if quemenu == "1":
                                 while 1 :
-                                    cualmenu3 = input("1. Menú comidas, 2. Menú cocteles, 3. Confirmar pedido, 4. Salir  ") 
+
+                                    cualmenu3 = input("1. Menú comidas, 2. Menú cocteles, 3. Editar pedido, 4. Confirmar pedido, 5. Salir  ") 
                                     bandera9 = True
                                     if cualmenu3 == "1":
-                                        productos = comprarComida()
+                                        productos = comprarComida(pedido)
+                                        pedido = []
                                         if productos != None:
-                                            productos = str(productos).replace("]", "")
-                                            productos = str(productos).replace("[", "")
-                                            productos = str(productos).replace("'", "")
-                                            pedido.append(productos)
-                                            
+                                            for i in productos:
+                                                pedido.append(i)
                                     elif cualmenu3 == "2":
-                                        productos = comprarCocteles()
+                                        productos = comprarCocteles(pedido)
+                                        pedido = []
                                         if productos != None:
-                                            productos = str(productos).replace("]", "")
-                                            productos = str(productos).replace("[", "")
-                                            productos = str(productos).replace("'", "")
-                                            pedido.append(productos)
+                                            for i in productos:
+                                                pedido.append(i)
                                     elif cualmenu3 == "3":
-                                        cambio = contodo ()
-                                        pedido.append(cambio)
-                                        pedido.insert(0,contadorPedidos+1)
-                                        print(pedido)
-                                        PedidosPendientes.append(pedido)
-                                        print(PedidosPendientes)
-                                        print("Pedido #" + str(contadorPedidos+1) + " guardado")
-                                        break
+                                        pedido = editarPedido (pedido)
                                     elif cualmenu3 == "4":
+                                        if pedido != []:
+                                            contadordePedidos  += 1
+                                            cambio = contodo ()
+                                            pedido.append(cambio)
+                                            pedido.insert(0,contadordePedidos)                                            
+                                            pedido.insert(1,"Cajero " + nombrecajero + " - " + documencajero )
+                                            pedido.insert(2, "Caja")
+                                            pedido.insert(3,today)
+                                            pedido.insert(4,"Varios")
+                                            pedido.insert(5,"2222222222")
+                                            pedido.insert(6,"No Reporta")
+                                            PedidosCocinando.append(pedido)
+                                            print("Pedido #" + str(contadordePedidos) + " guardado")
+                                            break
+                                        elif pedido == []:
+                                            print("No hay ningun producto ")
+                                            break
+                                    elif cualmenu3 == "5":
                                         break
-
-
+                            elif quemenu == "2":
+                                pedido2 = []
+                                while 1: 
+                                    try:
+                                        numbers = int(input(" ####. Ingrese código del producto, 1. Ver productos y codigo, 2. Editar pedido, 3. Confirmar pedido, 4. Salir  "  ))
+                                        if numbers > 1100 and numbers <= contadorMenuComidas:
+                                            for submenu in menu_comidas:    
+                                                for si in submenu[1]:
+                                                    if int(si[3]) == numbers :
+                                                        name = si[0]
+                                            if int(numbers) >= 1128 and int(numbers) <= 1136:
+                                                while 1 :
+                                                    papas = input("¿En combo con papa a la francesa? $3.000  (si) - (no)  ")
+                                                    if papas.lower() == "si":
+                                                        name  = name + " combo"
+                                                        name = cantidad (name)
+                                                        name,numpro = productoExiste(name,pedido2) 
+                                                        if numpro != -5:
+                                                            del pedido2[numpro]
+                                                        pedido2.append(name)
+                                                        break
+                                                    elif papas.lower() == "no":
+                                                        name = cantidad (name)
+                                                        name,numpro = productoExiste(name,pedido2) 
+                                                        if numpro != -5:
+                                                            del pedido2[numpro]
+                                                        pedido2.append(name)
+                                                        break   
+                                            else:
+                                                name = cantidad (name)
+                                                name,numpro = productoExiste(name,pedido2) 
+                                                if numpro != -5:
+                                                    del pedido2[numpro]
+                                                pedido2.append(name)
+                                            print("Producto guardado")
+                                            
+                                        elif numbers > 2100 and numbers <= contadorMenuCocteles:
+                                            for submenu in menu_cocteles:    
+                                                for si in submenu[1]:
+                                                    if int(si[3]) == numbers :
+                                                        name = si[0]
+                                                        print(name + "2")
+                                                        nombre = opcio (numbers, name)
+                                                        if nombre != []:
+                                                            name = cantidad (nombre)
+                                                            name,numpro = productoExiste(name,pedido2) 
+                                                            if numpro != -5:
+                                                                del pedido2[numpro]
+                                                            pedido2.append(name)
+                                                        elif nombre == []:
+                                                            name = cantidad (name)
+                                                            name,numpro = productoExiste(name,pedido2) 
+                                                            if numpro != -5:
+                                                                del pedido2[numpro]
+                                                            pedido2.append(name)
+                                            print("Producto guardado")
+                                        elif numbers == 1:
+                                            while 1:    
+                                                try :
+                                                    cualmenu4 = int(input("1. Menú comidas, 2. Menú Cocteles, 3. Salir  "))
+                                                    cont = 0
+                                                    if cualmenu4 == 1:
+                                                        print("")
+                                                        for submenu in menu_comidas:    
+                                                            for si in submenu[1]:
+                                                                if cont == 0:
+                                                                    print((si[0]).center(40, "-") + (si[3]) , end = "  ---  " )
+                                                                    cont = 1
+                                                                elif cont == 1:
+                                                                    print((si[0]).center(40, "-") + (si[3]) , end = "  ---  ")
+                                                                    cont = 2
+                                                                elif cont == 2:
+                                                                    print((si[0]).center(40, "-") + (si[3]))
+                                                                    cont = 0
+                                                        print("")
+                                                        print("")
+                                                        break       
+                                                    elif cualmenu4 == 2 :
+                                                        print("")
+                                                        for submenu in menu_cocteles:    
+                                                            for si in submenu[1]:
+                                                                if cont == 0:
+                                                                    print((si[0]).center(40, "-") + (si[3]) , end = "  ---  " )
+                                                                    cont = 1
+                                                                elif cont == 1:
+                                                                    print((si[0]).center(40, "-") + (si[3]) , end = "  ---  ")
+                                                                    cont = 2
+                                                                elif cont == 2:
+                                                                    print((si[0]).center(40, "-") + (si[3]))
+                                                                    cont = 0
+                                                        print("")
+                                                        print("")
+                                                        break       
+                                                    elif cualmenu4 == 3 :
+                                                        break
+                                                except ValueError:
+                                                    print("Ingrese un número  ") 
+                                        elif numbers == 2:
+                                            pedido2 = editarPedido(pedido2)
+                                        elif numbers == 3:    
+                                            if pedido2 != []:
+                                                contadordePedidos += 1
+                                                cambio = contodo ()
+                                                pedido2.append(cambio)
+                                                pedido2.insert(0,contadordePedidos)
+                                                pedido2.insert(1,"Cajero " + nombrecajero + " - " + documencajero)
+                                                pedido2.insert(2,"Caja")
+                                                pedido2.insert(3,today)
+                                                pedido2.insert(4,"Varios")
+                                                pedido2.insert(5,"2222222222")
+                                                pedido2.insert(6,"No Reporta")
+                                                PedidosCocinando.append(pedido2)
+                                                print("Pedido #" + str(contadordePedidos) + " guardado")
+                                                break
+                                            elif pedido2 == []:
+                                                print("No hay ningun producto ")
+                                                break 
+                                        elif numbers == 4:    
+                                            break
+                                    except ValueError:
+                                        print("Ingrese un código valido ")
                             elif quemenu == "3":
                                 bandera9 = True
                                 break            
+                    elif hacerCaj == "3":
+                       
+                        banderainf = False
+                        listpendien = []
+                        print("Cobrador ") 
+                        for verivacio in PedidosPendientes :
+                            if verivacio[0] != "":
+                                listpendien.append(verivacio[0])
+                                print("Factura #" + str(verivacio[0]))
+                                banderainf = True
+                        if banderainf == True:
+                            print("")
+                            while 1 :
+                                try:
+                                    cualCobrar = int(input("Escriba el numero de Factura que desea ver o " + str(contadordePedidos + 5) + " Salir     " ))
+                                    if cualCobrar == contadordePedidos + 5:
+                                        break
+                                    elif cualCobrar in listpendien :
+                                        print("""""""""""""""""""""""""""""""""""""""""")
+                                        while 1:
+                                            terminado = input("¿Factura pagada? (si) - (no) - (salir)  ")
+
+                                            if terminado.lower() == "si":
+                                                metodopag = metodopago()
+                                                PedidosPendientes [cualCobrar-1][3] = metodopag
+                                                PedidosPendientes[cualCobrar-1].insert(8,"posi")
+                                                FacturasGlobales.append(PedidosPendientes[cualCobrar-1])
+                                                factura = Facturas(PedidosPendientes[cualCobrar-1])
+                                                print(factura)
+                                                PedidosPendientes[cualCobrar-1] = ["",""]
+                                                break
+                                            elif terminado.lower() == "no":
+                                                PedidosPendientes [cualCobrar-1][3] = "cena"
+                                                PedidosPendientes[cualCobrar-1].insert(8,"nega")
+                                                FacturasGlobales.append(PedidosPendientes[cualCobrar-1])
+                                                factura = Facturas(PedidosPendientes[cualCobrar-1])
+                                                print(factura)
+                                                PedidosPendientes[cualCobrar-1] = ["",""]
+                                                print("Saldo en contra")
+                                                break 
+                                            elif terminado.lower() == "salir":
+                                                break
+                                        break                            
+                                except ValueError:
+                                    print("Ingrese un número ")
+                            break
+                        elif banderainf == False:
+                            print( "No hay pedidos por cancelar")
+                            break
                     elif hacerCaj == "4":
                         print("salir")
                         bandera8 = False
                         bandera9 = True
                         bandera6 = False
                         break 
-    
-####################################################################################################   
+                    else:
+                        bandera9 = True
 
+    #---------------------------------------Usuario
     elif queso=='3':
         bandera30=True
         while bandera30 == True:
@@ -1222,14 +1755,26 @@ while 1:
                 bandera31=False
                 usuarioUsu=input("Ingrese usuario: ")
                 contraseñaUsu=input("Ingrese contraseña: ")
-                if buscar_user_pass(usuarios, usuarioUsu, contraseñaUsu):
-                    print("Bienvenid@ usuario <3")
-                    bandera31=True
+                contador123 = 0
+                for uWu in usuarios:    
+                    if uWu[0] == usuarioUsu and uWu[1] == contraseñaUsu:
+                        if int(uWu[6]) !=3:
+                            numberposi = contador123
+                            nombre_azul = uWu[2]
+                            documento_azul = uWu[3]
+                            direccion_azul = uWu[5]
+                            contadorstray = int(uWu[6])
+                            print("Bienvenid@ usuario ヽ(✿ﾟ▽ﾟ)-")
+                            bandera31=True
+                            banderacanceladora = True
+                        else:
+                            print("Acceso Denegado.")
+                            bandera31 = False
                 while bandera31==True:
                     hacerUser = input("(Ingrese un número) 1. Modificar Datos, 2. Pedido Nuevo, 3. Pedido Vigente, 4. Factura, 5. Salir: ")
                     bandera32=False
+                    bandera33=True
                     while bandera32==False:
-
                         if hacerUser=='1':
                             usuario_azulmodi = input("Confirme usuario a modificar: ")
                             fila_azulmodi = None
@@ -1241,7 +1786,7 @@ while 1:
                                 print("El usuario ingresado no existe.")
                             else:
                                 while 1:
-                                    modificar_nombre = input("Desea modificar el nombre? si/no: ")
+                                    modificar_nombre = input("¿Desea modificar el nombre? si/no: ")
                                     if modificar_nombre.lower() == "si":
                                         nuevo_nombre = input("Ingrese el nuevo nombre: ")
                                         nuevo_nombre=verifinombre(nuevo_nombre)
@@ -1249,7 +1794,6 @@ while 1:
                                         break
                                     elif modificar_nombre.lower() == "no":
                                         break
-
                                 while 1:
                                     modificar_telefono = input("Desea modificar el teléfono? si/no: ")
                                     if modificar_telefono.lower() == "si":
@@ -1258,7 +1802,6 @@ while 1:
                                         break
                                     elif modificar_telefono.lower() == "no":
                                         break
-                                
                                 while 1:
                                     modificar_direccion = input("Desea modificar la dirección? si/no: ")
                                     if modificar_direccion.lower() == "si":
@@ -1268,11 +1811,115 @@ while 1:
                                     elif modificar_direccion.lower() == "no":
                                         break
                                 print('Sus datos con las modificaciones: ', usuarios[fila_azulmodi])
+                                break       
 
                         elif hacerUser=='2':
-                            print('hola')
+                            while 1: 
+                                menu_azul = input("Ingrese un número: 1. Ver menú, 2. Salir:  ")
+                                if menu_azul == "1":
+                                    while 1 :
+                                        cual_azul = input("1. Menú comidas, 2. Menú cocteles, 3. Editar Pedido, 4. Confirmar pedido, 5. Salir:  ") 
+                                        bandera32 = True
+                                        if cual_azul == "1":
+                                            productos = comprarComida(pedido_azul)
+                                            if productos != None:
+                                                for i in productos:
+                                                    pedido_azul.append(i)
+                                        elif cual_azul == "2":
+                                            productos = comprarCocteles(pedido_azul)
+                                            if productos != None:
+                                                for i in productos:
+                                                    pedido_azul.append(i)
+                                        elif cual_azul == "3":
+                                            pedido_azul = editarPedido(pedido_azul)
+                                        elif cual_azul == "4":
+                                            if pedido_azul != []:
+                                                    contadordePedidos += 1
+                                                    cambio = contodo ()
+                                                    pedido_azul.append(cambio)
+                                                    print(pedido_azul)
+                                                    while 1:
+                                                        confirm=input('¿Seguro que quiere confirmar el pedido?  si/no: ')
+                                                        if confirm.lower() == "si":
+                                                            opcion_pago = input("¿Desea pagar su pedido en línea o en la caja? (online/caja): ")
+                                                            if opcion_pago.lower() == 'online':
+                                                                print('Pagado.')
+                                                                pedido_azul.insert(0, contadordePedidos)
+                                                                pedido_azul.insert(1, "Cajero")
+                                                                pedido_azul.insert(2, "Online")
+                                                                pedido_azul.insert(3, today)
+                                                                pedido_azul.insert(4, nombre_azul)
+                                                                pedido_azul.insert(5, documento_azul)
+                                                                pedido_azul.insert(6, direccion_azul)
+                                                                print(pedido_azul) 
+                                                                PedidosPendientes_User.append(pedido_azul)
+                                                                PedidosCocinando.append(pedido_azul)
+                                                                print("Pedido #" + str(contadordePedidos) + " guardado")
+                                                                pedido_azul=[]
+                                                                break
+                                                            elif opcion_pago.lower() == 'caja':
+                                                                pedido_azul.insert(0, contadordePedidos)
+                                                                pedido_azul.insert(1, "Cajero")
+                                                                pedido_azul.insert(2, "En Caja")
+                                                                pedido_azul.insert(3, today)
+                                                                pedido_azul.insert(4, nombre_azul)
+                                                                pedido_azul.insert(5, documento_azul)
+                                                                pedido_azul.insert(6, direccion_azul)
+                                                                print(pedido_azul)
+                                                                PedidosPendientes_User.append(pedido_azul)
+                                                                PedidosCocinando.append(pedido_azul)
+                                                                print("Pedido #" + str(contadordePedidos) + " guardado")
+                                                                pedido_azul=[]
+                                                                break
+                                                        elif confirm.lower() == 'no':
+                                                            break
+                                            elif pedido_azul == []:
+                                                print('No hay productos existentes.')
+                                        elif cual_azul == "5":
+                                            break
+                                if menu_azul == "2":
+                                    break
+                            break
+                        
+                        elif hacerUser == "3":
+                            bandera33=True
+                            
+                            while 1:
+                                vigenteAzul=input('Ingrese un número: 1. Ver Pedidos Vigentes, 2. Cancelar Pedido Vigente, 3. Salir: ')
+                                if vigenteAzul=='1':
+                                    print(mostrarPedidosVigentes())
+                                    break
 
-            ####################################################################  
+                                elif vigenteAzul=='2' :
+                                    if PedidosPendientes_User != []:
+                                        PedidosPendientes_User = eliminar_pedidoVigente(PedidosPendientes_User, respaldoAzul)
+                                        contadorstray += 1
+                                        print(contador123)
+
+                                        usuarios[numberposi-1][6] = str(contadorstray)
+                                        if usuarios[numberposi-1][6] == "3":
+                                            banderacanceladora = False     
+                                        print(usuarios)
+                                        print(contadorstray)
+                                        break
+                                    elif PedidosPendientes_User == []:
+                                        print("No hay pedidos")
+                                        break
+
+                                if vigenteAzul=='3':
+                                    bandera32=True
+                                    break
+
+                        elif hacerUser == "4":
+                            
+                            break
+
+                        elif hacerUser == "5":
+                            bandera31 = False
+                            break
+                            
+                            
+
 
             elif azul=='2':
                 contadorAzul+=1
@@ -1282,10 +1929,12 @@ while 1:
                     documento = verifidocum()
                     telefono = verifitelefono()
                     direccion=input('Ingrese su dirección: ')
+
+                    stray=0
                     print(autouser_user(nombre, documento, telefono, direccion))
-    
-            #################################################################### 
+
             elif azul =='3':
                 break
 
-            
+####################################------------Final------------####################################
+
