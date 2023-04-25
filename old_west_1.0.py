@@ -884,7 +884,9 @@ while 1:
                                                         contam=0
                                                         for coma in menu_comidas:
                                                             boman=False
-                                                            if nombrecatego==coma[0]:
+                                                            nombrecatego=nombrecatego.strip()
+                                                            coma[0]=coma[0].strip()
+                                                            if nombrecatego.lower()==coma[0].lower():
                                                                 conta+=1
                                                                 bomi=True
                                                                 boman=True
@@ -922,7 +924,9 @@ while 1:
                                                         contam2=0
                                                         for coma in menu_cocteles:
                                                             boman2=False
-                                                            if nombrecatego2==coma[0]:
+                                                            nombrecatego=nombrecatego.strip()
+                                                            coma[0]=coma[0].strip()
+                                                            if nombrecatego2.lower()==coma[0].lower():
                                                                 conta2+=1
                                                                 bofi=True
                                                                 boman2=True
@@ -951,7 +955,8 @@ while 1:
                                                     elif nombrecatego2 == "1":
                                                         print("Categoría no agregada ")
                                                         bofi=False
-
+                                            elif tipocatego=='3':
+                                                break
                                     elif add == "3":
                                         break
 
@@ -1040,42 +1045,88 @@ while 1:
                                                 if bandera7==True:
                                                     categoriaedicion=menu_comidas[int(numberproduct)-1]
                                                     nuevocambiose=categoriaedicion[0]
-                                                    boni=True
-                                                    while boni==True:
-                                                        edicionnombre=input('Ingrese nombre de la categoria :   ')
-                                                        for coman in menu_comidas:
-                                                            bonan=False
-                                                            if edicionnombre== coman[0]:
-                                                                boni=False
-                                                                bonan=True
-                                                    if bonan==False:
-                                                        categoriaedicion[0]=edicionnombre
-                                                        menu_comidas[int(numberproduct)-1]=categoriaedicion
-                                                        pre=input('Desea modificar productos de esa categoria :  ')
-                                                        pre.strip()
-                                                        if pre=='si':
-                                                            modificarProductoCoctelComida('1')
-                                                        elif pre=='no':
-                                                            print('ok')
-                                                        mostrarMenuComida()
-                                                        banderamodificandoando=False
+                                                    
+                                                    bomi=True
+                                                    while bomi==True:
+                                                        edicionnombre=input('Ingrese nombre de la categoria  o 1.salir:   ')
+                                                        if edicionnombre != "1":
+                                                            conta=0
+                                                            contam=0
+                                                            for coma in menu_comidas:
+                                                                bonan=False
+                                                                edicionnombre=edicionnombre.strip()
+                                                                coma[0]=coma[0].strip()
+                                                                if edicionnombre.lower()== coma[0].lower():
+                                                                    boni=False
+                                                                    bonan=True
+                                                                    print("categoria ya existente")
+                                                                elif edicionnombre!=coma[0]:
+                                                                    contam+=1
+                                                                    if contam==len(menu_comidas):
+                                                                        bomi=False
+                                                                        contam=0
+                                                                        conta=0
+                                                                        edicionnombre=''
+                                                                        categoriaedicion[0]=edicionnombre
+                                                                        menu_comidas[int(numberproduct)-1]=categoriaedicion
+                                                                        pre=input('Desea modificar productos de esa categoria :  ')
+                                                                        pre.strip()
+                                                                        if pre=='si':
+                                                                            modificarProductoCoctelComida('1')
+                                                                        elif pre=='no':
+                                                                            print('ok')
+                                                                        mostrarMenuComida()
+                                                                        banderamodificandoando=False
+                                                                    elif bonan==True:
+                                                                        print("categoria ya existente")
+                                                        elif edicionnombre == "1":
+                                                            print("Categoría no agregada ")
+                                                            bomi=False
+
                                             elif cualcatego == '2':
                                                 mostrarMenuCocteles()
                                                 bandera7 , numberproduct = verificatecocteles()
                                                 if bandera7==True:
                                                     categoriaedicion=menu_cocteles[int(numberproduct)-1]
                                                     nuevocambiose=categoriaedicion[0]
-                                                    edicionnombre=input('Ingrese nombre de la categoria :   ')
-                                                    categoriaedicion[0]=edicionnombre
-                                                    menu_cocteles[int(numberproduct)-1]=categoriaedicion
-                                                    pre=input('Desea modificar productos de esa categoria :  ')
-                                                    pre.strip()
-                                                    if pre=='si':
-                                                        modificarProductoCoctelComida('2')
-                                                    elif pre=='no':
-                                                        print('ok')
-                                                    mostrarMenuCocteles()
-                                                    banderamodificandoando=False
+                                                    bomi=True
+                                                    while bomi==True:
+                                                        edicionnombre=input('Ingrese nombre de la categoria  o 1.salir:   ')
+                                                        if edicionnombre != "1":
+                                                            conta=0
+                                                            contam=0
+                                                            for coma in menu_cocteles:
+                                                                bonan=False
+                                                                edicionnombre=edicionnombre.strip()
+                                                                coma[0]=coma[0].strip()
+                                                                if edicionnombre.lower()== coma[0].lower():
+                                                                    boni=False
+                                                                    bonan=True
+                                                                    print("categoria ya existente")
+                                                                elif edicionnombre!=coma[0]:
+                                                                    contam+=1
+                                                                    if contam==len(menu_cocteles):
+                                                                        bomi=False
+                                                                        contam=0
+                                                                        conta=0
+                                                                        edicionnombre=''
+                                                                        categoriaedicion[0]=edicionnombre
+                                                                        menu_cocteles[int(numberproduct)-1]=categoriaedicion
+                                                                        pre=input('Desea modificar productos de esa categoria :  ')
+                                                                        pre.strip()
+                                                                        if pre=='si':
+                                                                            modificarProductoCoctelComida('2')
+                                                                        elif pre=='no':
+                                                                            print('ok')
+                                                                        mostrarMenuCocteles()
+                                                                        banderamodificandoando=False
+                                                                    elif bonan==True:
+                                                                        print("categoria ya existente")
+                                                        elif edicionnombre == "1":
+                                                            print("Categoría no agregada ")
+                                                            bomi=False
+
+
                                             elif cualcatego=='3':
                                                  banderamodificandoando=False
                                     elif edit=='3':
