@@ -810,8 +810,8 @@ while 1:
                                                         break
                                                 banderamal=True
                                                 cajeros[contadormodi]=cambios
-                                            if banderamal == False :
-                                                print("Cajero no encontrado.")
+                                        if banderamal == False :
+                                            print("Cajero no encontrado.")
                                 elif user_modificar=='2':
                                     bandera2=True
                             elif cajerosOpc=="5":
