@@ -73,6 +73,9 @@ PedidosPendientes_User = []
 FacturasGlobales = []
 respaldoAzul=[]
 
+contadorCodigoProductoComida=1158
+contadorCodigoProductoCoctel=2190
+
 #carrito_user=[]
 pedido_azul = []
 ####################################------------------------####################################
@@ -100,14 +103,14 @@ def espaciolinea ():
         print(" ", end = "")
     print(" " , end = "")
 
-def contadores (contadores):
-    for i in range(contadores):
+def contadores (cont):
+    for i in range(cont):
         print(" ", end="") 
 
 def Facturas (listas):
     lista = listas
     listacantidad  = []
-    print(lista)
+   # print(lista)
     print("\x1b[1;37m" )
     lineas()    
     espaciolinea () 
@@ -218,36 +221,46 @@ def Facturas (listas):
             precio = precio.split("$")
             precio= precio[1]
             if banderaprecio == True:
-                precio = int(precio[1]) + 3000 
+                precio = int(precio) + 3000 
         #print(precio)
         #print(type(precio))
 
 
 
+        
         espaciolinea()
         print(" ", codigo ,"    ", produ , end=" ")
 
-        contadorn1 = 45
+        contadorn1 = 42
         contadorn1 = contadorn1 - len(produ)
         contadores (contadorn1)
+        spa = 8 - len(cantidad)
+        contadores(spa)
         print(cantidad, end = "")
-        contadorn2 = 14
-        contadorn2 = 16 - len(cantidad)
+        
+        contadorn2 = 9 
         contadores(contadorn2)
+
+        spa = 10 - len(precio)
+        contadores (spa) 
+        
         prepun = preciopun (precio)
         print(prepun, end = "")
         
-        contadorn3 = 18 - len(prepun)
+        contadorn3 = 5
         contadores (contadorn3)
+
         total = int(cantidad) * int(precio)
         topun = preciopun (total)
+        spa = 14 - len(topun)
+        contadores(spa)
         print(str(topun))
         listacantidad.append(total)
     lineas ()
     espaciolinea()
-    for i in range(37):
+    for i in range(36):
         print(" ", end=" ")
-    contadorn5 = 14
+    contadorn5 = 19
     subtotal = str(sum(listacantidad))
     subtopun = preciopun (subtotal)
     contadorn5 = contadorn5 - len(subtopun)
@@ -256,31 +269,32 @@ def Facturas (listas):
     print(subtopun)
     
     espaciolinea()
-    for i in range(37):
+    for i in range(36):
         print(" ", end=" ")
     iva = str(int(0.19 * int(subtotal)))
-    contadorn6 = 22
+    contadorn6 = 27
     ivpun = preciopun (iva)
     contadorn6 = contadorn6 - len(ivpun)
     print("IVA" , end= "")
     contadores (contadorn6)
     print(ivpun)
     espaciolinea ()
-    for i in range(37):
+    for i in range(36):
         print(" ", end=" ")
     total = str(int(subtotal) + int(iva))
 #    totpun = preciopun(total)
 
     print("TOTAL $", end=" ")
+  #  print(lista)
     if lista[8] == "nega":
         total = str(-1 * int(total))
         totpun = preciopun(total)
-        contadorn7 = 17 - len(totpun)
+        contadorn7 = 22 - len(totpun)
         contadores (contadorn7)
         print(totpun)
     elif lista[8] == "posi":
         totpun = preciopun(total)
-        contadorn7 = 17 - len(totpun)
+        contadorn7 = 22 - len(totpun)
         contadores (contadorn7)
         print(totpun)
 
@@ -291,7 +305,7 @@ def Facturas (listas):
     print("\x1b[3;37m"+ "Gracias por preferirnos")
     lineas ()
     print("\33[0;m" , end= "")
-    return ""
+    return "", total
 
 #---------------------------------------
 def autousercajero(nombre, documento):
@@ -570,8 +584,10 @@ def eliminar_pedidoVigente(PedidosPendientes_User, respaldoAzul):
         except ValueError:
             print("¡Debe ingresar un número válido correspondiente a la lista que desea eliminar!")
 
-    pedido_eliminado=PedidosPendientes_User.pop(genjutsu)
-    respaldoAzul.append(pedido_eliminado)
+    PedidosCocinando[genjutsu] = ["",""]
+
+    #pedido_eliminado=PedidosPendientes_User.pop(genjutsu)
+    #respaldoAzul.append(pedido_eliminado)
 
     print(f'El pedido ha sido cancelado.')
     return PedidosPendientes_User
@@ -650,7 +666,7 @@ def verificateProductoComidas(numberproduct):
 
 
 #---------------------------------------
-def nuevoProductoCocteles(numberproduct):
+def nuevoProductoCocteles(numberproduct,conta):
     nuevo=menu_cocteles[int(numberproduct)-1]
     nombre_producto = input('Ingrese el nombre del nuevo producto o 1. Salir: ')
     nombre_producto = verifinombre (nombre_producto)
@@ -658,14 +674,14 @@ def nuevoProductoCocteles(numberproduct):
     descripcion = verifinombre (descripcion)
     if nombre_producto != "1" and descripcion != "1":
         precio=verifiprice()
-        nuevo[1].append([nombre_producto.upper(), descripcion, 'Precio: $' + str(precio)])
+        nuevo[1].append([nombre_producto.upper(), [descripcion], ['Precio: $' + str(precio)],str(conta)])
         menu_cocteles[int(numberproduct)-1]=nuevo
         print(menu_cocteles[int(numberproduct)-1])
     else:
         print("No se guardo el producto")
 
 #---------------------------------------
-def nuevoProductoComida(numberproduct):
+def nuevoProductoComida(numberproduct,contado):
     nuevo=menu_comidas[int(numberproduct)-1]
     nombre_producto=input('Ingrese el nombre del nuevo producto o 1. Salir: ')
     nombre_producto = verifinombre (nombre_producto)
@@ -673,7 +689,7 @@ def nuevoProductoComida(numberproduct):
     descripcion = verifinombre(descripcion)
     if nombre_producto != "1" and descripcion != "1":
         precio=verifiprice()
-        nuevo[1].append([nombre_producto.upper(), descripcion, 'Precio: $' + str(precio)])
+        nuevo[1].append([nombre_producto.upper(), [descripcion], ['Precio: $' + str(precio)],str(contado)])
         menu_comidas[int(numberproduct)-1]=nuevo
         print(menu_comidas[int(numberproduct)-1])
     else:
@@ -997,32 +1013,65 @@ def opcio (number, nombre):
             break
     return nombre
 
+def validacionInicioAdmin(usu,contra):
+    bandera=False
+    if admin[0]==usu and admin[1]==contra:  
+        bandera=True
+        return bandera
+    else:
+        bandera=False
+        return bandera
+        
+def validacionInicioUsuario(usu,contra):
+    contadorUser=0
+    coma=0
+    bandera=False
+    for usi in usuarios:
+        if usi[0]==usu and usi[1]==contra: 
+            contadorUser+=1 
+            bandera=True
+            return bandera
+        else:
+            coma+=1
+            bandera=False
+            
+            if coma==len(usuarios):
+                return bandera
+        
+def validacionInicioCajero(usu,contra):
+    contadorCajeros=0
+    coma=0
+    bandera=False
+    for us in cajeros:
+        if us[0]==usu and us[1]==contra:  
+            contadorCajeros+=1
+            bandera=True
+            return bandera
+        else:
+            coma+=1
+            bandera=False
+            if coma==len(cajeros):
+                return bandera
+
 
 ####################################------------Inicio------------####################################
 while 1:
     print("¡¡¡ Bienvenid@s a OLD WEST !!! (づ ｡◕‿‿◕｡) づ  ")
-    queso=input("(Ingrese un número): 1. Administrador, 2. Cajero, 3. Usuario: " )
+    #queso=input("(Ingrese un número): 1. Administrador, 2. Cajero, 3. Usuario: " )
 
+    usuario=input("Ingrese usuario :  ")
+    contraseña=input("Ingrese contraseña :  ")
+
+    
+    banderaInicioAdmin=validacionInicioAdmin(usuario,contraseña)
+    banderaInicioUsuario=validacionInicioUsuario(usuario,contraseña)
+    banderaInicioCajero=validacionInicioCajero(usuario,contraseña)
+    print(banderaInicioAdmin)
+    print(banderaInicioUsuario)
+    print(banderaInicioCajero)
     #---------------------------------------Administrador
 
-    if queso=='1':
-        bandera5 = True
-        while bandera5 == True :
-            bandera1=False
-            usuarioAdm=input("Ingrese usuario: ")
-            contraseñaAdm=input("Ingrese contraseña: ")
-            if usuarioAdm==admin[0] and contraseñaAdm==admin[1]:
-                print("Bienvenid@ Administrador :D ")
-                bandera1=True
-            else:
-                while 1:
-                    arrepentimiento=input("Usuario o contraseña incorrecta 1.Ingresar nuevamente, 2. salir")
-                    if arrepentimiento =='1':
-                        bandera5 = True
-                        break
-                    elif arrepentimiento=='2':
-                        bandera5 = False
-                        break
+    if banderaInicioAdmin==True:
             while bandera1==True:
                 hacerAdm = input("(Ingrese un número) 1. Cajero, 2. Producto, 3. Ventas, 4. Volver al menú: ")
                 bandera3 =False
@@ -1061,8 +1110,10 @@ while 1:
                                 nombre=input('Ingrese su nombre o 1. Salir:  ')
                                 nombre = verifinombre(nombre)
                                 if nombre != "1" :
-                                    documento = verifidocum()
+                                    documento,bandera = verifidocum()
+                                    print(documento)
                                     if len(str(documento)) >= 8 and len(str(documento)) <= 10 :
+                                        print('j')
                                         print(autousercajero(nombre,documento))
                                         print(cajeros)
                             elif cajerosOpc=="4":
@@ -1147,19 +1198,23 @@ while 1:
                                     add = input('Agregar nuevo:  1. Producto, 2. Categoría, 3. Salir : ')
                                     if add == '1':
                                         while 1 :
+                                            
+                                            
                                             cualmenu2 = input('(Ingrese un número) 1. Menú Comidas, 2. Menú Cocteles, 3. Salir: ')
                                             if cualmenu2 == '1':
+                                                contadorCodigoProductoComida+=1
                                                 mostrarMenuComida()
                                                 bandera7 , numberproduct = verificatecomidas()            
                                                 if bandera7 == True:
-                                                    nuevoProductoComida(str(numberproduct))
+                                                    nuevoProductoComida(str(numberproduct),contadorCodigoProductoComida)
                                                 elif bandera7 == False:
                                                     print("No se guardo el producto ")    
                                             elif cualmenu2 == '2':
+                                                contadorCodigoProductoCoctel+=1
                                                 mostrarMenuCocteles()
                                                 bandera7 , numberproduct = verificatecocteles()            
                                                 if bandera7 == True:
-                                                    nuevoProductoCocteles(numberproduct)
+                                                    nuevoProductoCocteles(numberproduct,contadorCodigoProductoCoctel)
                                                 elif bandera7 == False:
                                                     print("No se guardo el producto ")
                                             elif cualmenu2 == '3':
@@ -1443,6 +1498,25 @@ while 1:
                                 bandera3 = True
                                 break       
                             
+                    elif hacerAdm=='3':
+
+                        if FacturasGlobales != []:
+                            print(FacturasGlobales)
+                            print(len(FacturasGlobales) , "HOLA")
+                            contadoraña = -1
+                            
+                            for i in FacturasGlobales:
+                                contadoraña += 1
+                                FacturasGlobales[contadoraña].append("None")
+                                print(i)
+                                Nada, factura = Facturas (i)
+                                print (Nada)
+                            
+                            break
+                        elif FacturasGlobales == [] :
+                            print("No hay facturas")
+                            break
+
                     elif hacerAdm == "4":
                         bandera3 = True
                         bandera1 = False  
@@ -1450,7 +1524,7 @@ while 1:
 
 
     #---------------------------------------Cajeros
-    elif queso=='2':
+    elif banderaInicioCajero==True:
         bandera6 = True
         while bandera6 == True:
             usuarioCaj=input("Ingrese usuario: ")
@@ -1465,6 +1539,7 @@ while 1:
             if bandera8 == False:
                 print("Usuario o contraseña incorrecta\n")
                 break
+            bandera8=True
             while bandera8==True:
 
                 hacerCaj = input("(Ingrese un número) 1. Pedido, 2. Pedido Nuevo, 3. Pendientes, 4. Volver al menú: ")
@@ -1500,11 +1575,22 @@ while 1:
                                                 PedidosCocinando[cualPedido-1].insert(0,contadordeFacturas)
                                                 
                                                 if PedidosCocinando[cualPedido-1][3] == "Online" :
+                                                #    contadordeFacturas =  contadordeFacturas + 1
+                                                    PedidosCocinando[cualPedido-1].insert(0,contadordeFacturas)
                                                     FacturasGlobales.append(PedidosCocinando[cualPedido-1])
+                                                 #   print("123" , FacturasGlobales, "svsdfsfs" ,PedidosCocinando[cualPedido-1])
+                                                    Pedi = ["",""]
+                                                    PedidosPendientes.append(Pedi)
+
                                                 elif PedidosCocinando[cualPedido-1][3] != "Online":
+                                                    print("123" , FacturasGlobales,"sepa ", PedidosCocinando[cualPedido-1])
                                                     PedidosPendientes.append(PedidosCocinando[cualPedido-1])
+                                                
                                                 PedidosCocinando[cualPedido-1] = ["",""]
                                                 
+                                                #PedidosPendientes[cualCobrar-1] = ["",""]
+
+
                                                 break
                                             elif terminado.lower() == "no":
                                                 break 
@@ -1668,7 +1754,7 @@ while 1:
                                                 cambio = contodo ()
                                                 pedido2.append(cambio)
                                                 pedido2.insert(0,contadordePedidos)
-                                                pedido2.insert(1,"Cajero " + nombrecajero + " - " + documencajero)
+                                                pedido2.insert(1,"Cajero " + str(nombrecajero) + " - " + str(documencajero))
                                                 pedido2.insert(2,"Caja")
                                                 pedido2.insert(3,today)
                                                 pedido2.insert(4,"Varios")
@@ -1711,11 +1797,17 @@ while 1:
 
                                             if terminado.lower() == "si":
                                                 metodopag = metodopago()
-                                                PedidosPendientes [cualCobrar-1][3] = metodopag
+                                                print(cualCobrar)
+                                                print(cualCobrar-1)
+                                                print(PedidosPendientes)
+                                                PedidosPendientes[cualCobrar-1][3] = metodopag 
                                                 PedidosPendientes[cualCobrar-1].insert(8,"posi")
                                                 FacturasGlobales.append(PedidosPendientes[cualCobrar-1])
                                                 factura = Facturas(PedidosPendientes[cualCobrar-1])
                                                 print(factura)
+
+                                                print(PedidosPendientes[cualCobrar-1])
+                                                print(FacturasGlobales)
                                                 PedidosPendientes[cualCobrar-1] = ["",""]
                                                 break
                                             elif terminado.lower() == "no":
@@ -1746,7 +1838,7 @@ while 1:
                         bandera9 = True
 
     #---------------------------------------Usuario
-    elif queso=='3':
+    elif banderaInicioUsuario==True:
         bandera30=True
         while bandera30 == True:
             bandera31=False
@@ -1756,7 +1848,8 @@ while 1:
                 usuarioUsu=input("Ingrese usuario: ")
                 contraseñaUsu=input("Ingrese contraseña: ")
                 contador123 = 0
-                for uWu in usuarios:    
+                for uWu in usuarios:  
+                    contador123 += 1  
                     if uWu[0] == usuarioUsu and uWu[1] == contraseñaUsu:
                         if int(uWu[6]) !=3:
                             numberposi = contador123
@@ -1893,14 +1986,22 @@ while 1:
                                 elif vigenteAzul=='2' :
                                     if PedidosPendientes_User != []:
                                         PedidosPendientes_User = eliminar_pedidoVigente(PedidosPendientes_User, respaldoAzul)
-                                        contadorstray += 1
-                                        print(contador123)
+                                       # PedidosCocinando[] = ["",""]
 
+                                        contadorstray += 1
+                                       # print(contador123)
+                                     
                                         usuarios[numberposi-1][6] = str(contadorstray)
                                         if usuarios[numberposi-1][6] == "3":
-                                            banderacanceladora = False     
-                                        print(usuarios)
-                                        print(contadorstray)
+                                
+                                            banderacanceladora = False 
+                                     #       bandera32=True 
+                                      
+                                      #  print(usuarios)
+                                       # print(contadorstray)
+                                        bandera32 = True
+                                        bandera31 = False
+
                                         break
                                     elif PedidosPendientes_User == []:
                                         print("No hay pedidos")
@@ -1911,7 +2012,11 @@ while 1:
                                     break
 
                         elif hacerUser == "4":
-                            
+                            for i in FacturasGlobales:
+                                if i[6] == documento_azul:
+                                    factura = Facturas (i)
+                                    print (factura)
+
                             break
 
                         elif hacerUser == "5":
@@ -1931,10 +2036,16 @@ while 1:
                     direccion=input('Ingrese su dirección: ')
 
                     stray=0
-                    print(autouser_user(nombre, documento, telefono, direccion))
-
+                    if documento != None:
+                        print(autouser_user(nombre, documento, telefono, direccion, stray))
+                    elif documento == None:
+                        print("Usuario existente. Acceso denegado.")
             elif azul =='3':
                 break
+    
+    elif banderaInicioCajero==False and banderaInicioAdmin==False and banderaInicioUsuario==False:
+        print("usuario y/o clave incorrecta")
 
 ####################################------------Final------------####################################
 
+ 
