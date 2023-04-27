@@ -961,112 +961,214 @@ def modificarProductoCoctelComida(cualpron):
         if bani==True:
             producto_a_modificar=nupi[nume]
             cambiose=[]
-            while 1:
+            cancelarmundo=True
+            chao=False
+            nuv=True
+            hola=False
+            while cancelarmundo==True:
                 nameproduct=input('¿Desea cambiar nombre del producto? si/no  :  ')
                 nameproduct=nameproduct.strip()
                 if nameproduct=='si':
-                    namenewpro=input('Ingrese nuevo nombre del producto :  ')
-                    if verificarString(namenewpro)==True:
-                        cambiose.append(namenewpro.upper())
-                        break
+                    while nuv==True:
+                        contadorproduc=0
+                        contadorproduc2=0
+                        nombre_producto=input('Ingrese el nombre del producto o 1. Salir: ')
+                        nombre_producto = verifinombre (nombre_producto)
+                        nombre_producto =nombre_producto.strip().lower()
+                        comprobarnombreDescripcion1=comprobarnombreDescripcioncomida()
+                        
+                            
+                        if nombre_producto != "1" :
+                            for x in comprobarnombreDescripcion1:
+                                if nombre_producto==x[0].strip().lower():
+                                    contadorproduc+=1
+                                    cancelarmundo=False
+                                elif nombre_producto!=x[0].strip().lower():
+                                    contadorproduc2+=1
+                                    if contadorproduc2==(len(comprobarnombreDescripcion1)):
+                                        cambiose.append(nombre_producto.upper())
+                                        hola=True
+                                        nuv=False
+                        
+                            if hola==False:
+                                print('producto ya se encuentra registrado con ese nombre')
+
                 elif nameproduct=='no':
-                    cambiose.append(producto_a_modificar[0])
-                    break
+                            cambiose.append(producto_a_modificar[0])
+                            hola=True
 
-            while 1:
-                descripcionproduct=input('¿Desea cambiar descripcion del producto? si/no  :  ')
-                descripcionproduct=descripcionproduct.strip()
-                if descripcionproduct=='si':
-                    descripnewpro=input('Ingrese nueva descripcion del producto :   ')
+                if hola==True: 
+                    fin=True  
+                    inicio=True       
+                    while inicio==True:  
+                        while fin==True: 
+                            descripcionproduct=input('¿Desea cambiar descripcion del producto? si/no  :  ')
+                            descripcionproduct=descripcionproduct.strip()
+                            if descripcionproduct=='si':      
+                                contadorproduc3=0
+                                contadorproduc4=0
+                                descripcion = input('Ingrese la descripción del producto o 1. Salir: ')
+                                descripcion = verifinombre(descripcion)
+                                comprobarnombreDescripcion17=comprobarnombreDescripcioncomida()
+                                chao=False
+                                if descripcion != "1":
+                                    for x in comprobarnombreDescripcion17:
+                                        if [descripcion]==x[1]:
+                                            contadorproduc3+=1
+                                            inicio=False
+                                        elif [descripcion]!=x[1]:
+                                            contadorproduc4+=1
+                                            if contadorproduc4==(len(comprobarnombreDescripcion17)):
+                                                chao=True
+                                                fin=False
+                                                cambiose.append([descripcion])
+                                                break
+                                if descripcion=='1':
+                                    cancelarmundo=False
 
-                    cambiose.append(descripnewpro)
-                    break
-                elif descripcionproduct=='no':
-                    descripnewpro=producto_a_modificar[1]
-                    cambiose.append(descripnewpro)
+                                    return cancelarmundo
+                            elif descripcionproduct=='no':
+                                descripcion=producto_a_modificar[1]
+                                cambiose.append([descripcion])
+                                chao=True
 
-                    break
-            while 1:
-                priceproduct=input('¿Desea cambiar precio del producto? si/no  :  ')
-                priceproduct=priceproduct.strip()
-                if priceproduct=='si':
-                    precio1=verifiprice()
-                    precioe=descripnewpro, 'Precio: $'+str(precio1)
-                    precioewpro=list(precioe)
+                            if chao==True:
+                                while 1:
+                                    priceproduct=input('¿Desea cambiar precio del producto? si/no  :  ')
+                                    priceproduct=priceproduct.strip()
+                                    if priceproduct=='si':
+                                        precio1=verifiprice()
+                                        precioe=['Precio: $'+str(precio1)]
+                                        precioewpro=list(precioe)
 
-                    cambiose.append(precioewpro)
-                    break
-                elif descripcionproduct=='no':
-                    precioe=producto_a_modificar[2]
-                    cambiose.append(precioe)
-                    break
-                    break
-            cambiose.append(producto_a_modificar[3])
+                                        cambiose.append(precioe)
+                                        break
+                                    elif descripcionproduct=='no':
+                                        precioe=producto_a_modificar[2]
+                                        cambiose.append(precioe)
+                                        break
+                                cambiose.append(producto_a_modificar[3])
 
-            nupi[nume]=cambiose
-            elimino[1]=nupi
-            menu_comidas[caten]=elimino
-            print(menu_comidas[caten])
-
-
-
-
-
-
-
+                                nupi[nume]=cambiose
+                                elimino[1]=nupi
+                                menu_comidas[caten]=elimino
+                                print(menu_comidas[caten])
+                                cancelarmundo=False
+                                return cancelarmundo
             
+
+                                                            
+
+                
+
+
+
+
     elif cualpron=='2':
 
         banin,nupi,elimino,caten,nume=eliminarModificarProducto('2')
         if banin==True:        
-
+            chao=False
+            nuv=True
+            hola=False
             producto_a_modificar=nupi[nume]
             cambiose=[]
-            while 1:
+            cancelarmundo=True
+            while cancelarmundo==True:
                 nameproduct=input('¿Desea cambiar nombre del producto? si/no  :  ')
                 nameproduct=nameproduct.strip()
                 if nameproduct=='si':
-                    namenewpro=input('Ingrese nuevo nombre del producto :  ')
-                    if verificarString(namenewpro)==True:
-                        cambiose.append(namenewpro.upper())
-                        break
+                    while nuv==True:
+                        contadorproduc=0
+                        contadorproduc2=0
+                        nombre_producto=input('Ingrese el nombre del producto o 1. Salir: ')
+                        nombre_producto = verifinombre (nombre_producto)
+                        nombre_producto =nombre_producto.strip().lower()
+                        comprobarnombreDescripcion1=comprobarnombreDescripcioncoctel()
+                        if nombre_producto != "1" :
+                            for x in comprobarnombreDescripcion1:
+                                if nombre_producto==x[0].strip().lower():
+                                    contadorproduc+=1
+                                    cancelarmundo=False
+                                elif nombre_producto!=x[0].strip().lower():
+                                    contadorproduc2+=1
+                                    if contadorproduc2==(len(comprobarnombreDescripcion1)):
+                                        cambiose.append(nombre_producto.upper())
+                                        hola=True
+                                        nuv=False
+                                    elif nameproduct=='no':
+                                        cambiose.append(producto_a_modificar[0])
+                                        nuv=False
+                                        hola=True
+                            if hola==False:
+                                print('producto ya se encuentra registrado con ese nombre')
                 elif nameproduct=='no':
                     cambiose.append(producto_a_modificar[0])
-                    break
+                    hola=True
 
-            while 1:
-                descripcionproduct=input('¿Desea cambiar descripcion del producto? si/no  :  ')
-                descripcionproduct=descripcionproduct.strip()
-                if descripcionproduct=='si':
-                    descripnewpro=input('Ingrese nueva descripcion del producto :   ')
+                if hola==True: 
+                    fin=True  
+                    inicio=True       
+                    while inicio==True:  
+                        while fin==True: 
+                            descripcionproduct=input('¿Desea cambiar descripcion del producto? si/no  :  ')
+                            descripcionproduct=descripcionproduct.strip()
+                            if descripcionproduct=='si':      
+                                contadorproduc3=0
+                                contadorproduc4=0
+                                descripcion = input('Ingrese la descripción del producto o 1. Salir: ')
+                                descripcion = verifinombre(descripcion)
+                                descripcion =descripcion
+                                comprobarnombreDescripcion17=comprobarnombreDescripcioncoctel()
+                                chao=False
+                                if descripcion != "1":
+                                    for x in comprobarnombreDescripcion17:
+                                        if [descripcion]==x[1]:
+                                            contadorproduc3+=1
+                                            inicio=False
+                                        elif [descripcion]!=x[1]:
+                                            contadorproduc4+=1
+                                            if contadorproduc4==(len(comprobarnombreDescripcion17)):
+                                                chao=True
+                                                fin=False
+                                                cambiose.append(descripcion)
+                                                break
+                                if descripcion=='1':
+                                    cancelarmundo=False
+                                    return cancelarmundo
+                            elif descripcionproduct=='no':
+                                descripnewpro=producto_a_modificar[1]
+                                cambiose.append(descripnewpro)
+                                chao=True
 
-                    cambiose.append(descripnewpro)
-                    break
-                elif descripcionproduct=='no':
-                    descripnewpro=producto_a_modificar[1]
-                    cambiose.append(descripnewpro)
+                            if chao==True:
+                                while 1:
+                                    priceproduct=input('¿Desea cambiar precio del producto? si/no  :  ')
+                                    priceproduct=priceproduct.strip()
+                                    if priceproduct=='si':
+                                        precio1=verifiprice()
+                                        precioe=descripnewpro, 'Precio: $'+str(precio1)
+                                        precioewpro=list(precioe)
 
-                    break
-            while 1:
-                priceproduct=input('¿Desea cambiar precio del producto? si/no  :  ')
-                priceproduct=priceproduct.strip()
-                if priceproduct=='si':
-                    precio1=verifiprice()
+                                        cambiose.append(precioewpro)
+                                        break
+                                    elif descripcionproduct=='no':
+                                        precioe=producto_a_modificar[2]
+                                        cambiose.append(precioe)
+                                        break
+                                cambiose.append(producto_a_modificar[3])
 
-                    precioe= 'Precio: $'+str(precio1)
-                    precioe=list(precioe)
-                    cambiose.append(precioe)
-                    break
-                elif descripcionproduct=='no':
-                    precioe=producto_a_modificar[2]
-                    cambiose.append(precioe)
-                    break
-            cambiose.append(producto_a_modificar[3])
+                                nupi[nume]=cambiose
+                                elimino[1]=nupi
+                                menu_cocteles[caten]=elimino
+                                print(menu_cocteles[caten])
 
-            nupi[nume]=cambiose
-            elimino[1]=nupi
-            menu_cocteles[caten]=elimino
-            print(menu_cocteles[caten])
+                elif nombre_producto=='1':
+                    cancelarmundo=False
+                    return cancelarmundo                                              
+
+                
+
 
 
 #---------------------------------------
@@ -1629,11 +1731,13 @@ while 1:
                                         cualpro=input('Ingrese un número: 1. Menú Comidas, 2. Menú Cocteles, 3. Salir : ')
 
                                         if cualpro=='1':
-                                            modificarProductoCoctelComida('1')
-                                            bandenose=False
+                                            banh=modificarProductoCoctelComida('1')
+                                            if banh==False:
+                                                bandenose=False
                                         elif cualpro=='2':
-                                            modificarProductoCoctelComida('2')
-                                            bandenose=False
+                                            banh=modificarProductoCoctelComida('2')
+                                            if banh==False:
+                                                bandenose=False
                                         elif cualpro=='3':
                                             bandenose=False
 
