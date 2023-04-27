@@ -1007,6 +1007,14 @@ def modificarProductoCoctelComida(cualpron):
             elimino[1]=nupi
             menu_comidas[caten]=elimino
             print(menu_comidas[caten])
+
+
+
+
+
+
+
+            
     elif cualpron=='2':
 
         banin,nupi,elimino,caten,nume=eliminarModificarProducto('2')
